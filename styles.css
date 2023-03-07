@@ -419,5 +419,37 @@ button[type="submit"]:hover {
   }
 }
 
+ul.nav-items {
+  height: 0;
+  overflow: hidden;
+}
+#navigation:target .nav-items {
+  height: 15em;
+  border-radius: 10px;
+  background: #f0f0f0 none repeat scroll 0 0 ;
+  transition: height 0.4s ease-in-out, background-color 0.9s ease 0s;
+}
+.close {
+  display: none;
+}
+#navigation:target .open {
+  display: none;
+}
+#navigation:target .close{
+  display: block;
+}
+.menuDes{
+  align-items: baseline;
+  margin-top: 60px;
+  margin-bottom: -60px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #f7f7f7;
+}
+span{
+  background-color: #333;
+  border-radius: 5px;
+  color: white;
+}
   
   
