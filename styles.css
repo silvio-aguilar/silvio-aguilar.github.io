@@ -1,0 +1,423 @@
+/* Estilos para el encabezado y el menú sticky */
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+header a {
+  color: #555;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+header a:hover {
+  color: #000;
+}
+body {
+    font-family: 'Roboto';
+}
+
+/* Estilos para la sección del héroe */
+#hero {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 80px);
+  text-align: center;
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+}
+#hero h1 {
+  color: #333;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+#hero p {
+  color: #666;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+#hero .btn {
+  background-color: #333;
+  border: none;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+#hero .btn:hover {
+  background-color: #000;
+  cursor: pointer;
+}
+
+/* Estilos para la sección "Sobre mí" */
+#about {
+  background-color: #fff;
+  padding: 4rem 0;
+  text-align: center;
+}
+#about h2 {
+  color: #333;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+#about p {
+  color: #666;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+}
+#about .btn {
+  background-color: #333;
+  border: none;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+#about .btn:hover {
+  background-color: #000;
+  cursor: pointer;
+}
+
+/* Estilos para la sección de proyectos */
+#projects {
+  background-color: #f7f7f7;
+  padding: 4rem 0;
+  text-align: center;
+}
+#projects h2 {
+  color: #333;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.project-card {
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 800px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.project-card img {
+  max-width: 100%;
+  height: auto;
+}
+.project-card h3 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.project-card p {
+  color: #666;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+}
+.project-card .btn {
+  background-color: #333;
+  border: none;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+.project-card .btn:hover {
+  background-color: #000;
+  cursor: pointer;
+}
+
+/* Estilos para el pie de página */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+}
+footer p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+/* Estilos para el formulario de contacto */
+#contacto {
+  background-color: #f4f4f4;
+  padding: 2rem;
+  text-align: center;
+}
+
+#contacto h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.input-group label {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group textarea {
+  background-color: #f7f7f7;
+  border: none;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="email"]:focus,
+.input-group textarea:focus {
+  outline: none;
+  box-shadow: 0 0 2px #333;
+}
+
+button[type="submit"] {
+  background-color: #333;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+button[type="submit"]:hover {
+  background-color: #000;
+  cursor: pointer;
+}
+
+/* Media queries para hacer el formulario responsive */
+@media (max-width: 600px) {
+  form {
+    max-width: 90%;
+  }
+
+  .input-group input[type="text"],
+  .input-group input[type="email"],
+  .input-group textarea {
+    font-size: 0.9rem;
+  }
+
+  button[type="submit"] {
+    font-size: 0.9rem;
+  }
+}
+
+/* Estilos para dispositivos de pantalla pequeña */
+
+@media only screen and (max-width: 600px) {
+    /* Modifica los estilos de acuerdo a tus necesidades */
+    
+    /* Ajusta el ancho del cuerpo y los márgenes */
+    body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  
+    /* Ajusta el tamaño de fuente y la altura de línea */
+    h1, h2, h3, h4, h5, h6 {
+      font-size: 24px;
+      line-height: 1.2;
+    }
+  
+    /* Ajusta el ancho y la altura de las imágenes */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    /* Ajusta el tamaño de fuente y la altura de línea del texto */
+    p, li {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+  
+    /* Ajusta el ancho de los contenedores de sección */
+    section {
+      width: 100%;
+    }
+  
+    /* Ajusta el tamaño y la posición del menú de navegación */
+    nav {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      background-color: #333;
+    }
+  
+    /* Ajusta el tamaño y la posición de los elementos del menú */
+    nav a {
+      display: block;
+      width: 100%;
+      padding: 10px 20px;
+      color: #fff;
+      text-align: center;
+      border-bottom: 1px solid #fff;
+    }
+  
+    /* Ajusta el estilo del botón */
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 10px 20px;
+      margin: 20px 0;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+  
+    /* Ajusta los estilos del formulario */
+    form {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    /* Ajusta los estilos de los elementos de formulario */
+    label, input, textarea, button {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    /* Ajusta el ancho y la altura del botón de envío */
+    button[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+
+  .botonProyecto {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+  }
+  
+  .botonProyecto:hover {
+    background-color: #545454;
+  }
+  
+.heroColor:hover{
+  color: #4285F4;
+}
+
+.pantallaCarga {
+  margin-top:50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2a2a2a;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedorCarga {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.animacionCarga {
+  width: 80px;
+  height: 80px;
+  border: 6px solid rgba(255, 255, 255, 0.3);
+  border-top-color: black;
+  border-radius: 50%;
+  animation: girarCarga 1s infinite linear;
+  margin-bottom: 2rem;
+}
+
+.textoCarga {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+
+@keyframes girarCarga {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+  
+  

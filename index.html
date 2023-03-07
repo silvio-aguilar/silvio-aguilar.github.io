@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Silvio Aguilar</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a class="heroColor" href="#hero">Inicio</a><hr>
+        <a href="#about">Sobre mí</a><hr>
+        <a href="#projects">Proyectos</a><hr>
+        <a href="#contacto">Contacto</a><hr>
+        <a href="./paginas/componentes.html">Componentes</a>
+      </nav>
+    </header>
+    <main>
+      <section id="hero">
+        <h1>Bienvenid@ a mi portfolio</h1>
+        <p>
+          ¡Hola! Soy Silvio Aguilar, un desarrollador de software FrontEnd
+          apasionado por la creación de experiencias únicas para los usuarios.
+          Disfruto trabajando con diferentes tecnologías como HTML, CSS,
+          JavaScript, React, entre otros.
+        </p>
+        <a href="#projects" class="btn">Ver proyectos</a>
+      </section>
+      <section id="about">
+        <h2>Sobre mí</h2>
+        <p>
+          Mi nombre es Silvio Aguilar, tengo 25 años y soy un desarrollador de
+          software apasionado por el FrontEnd y estudiando FullStack. Desde que
+          descubrí el mundo del desarrollo de software, he estado obsesionado
+          con crear experiencias increíbles para los usuarios y encontrar
+          soluciones creativas a los problemas de la vida real. Mi especialidad
+          es el desarrollo FrontEnd, en el que he trabajado con diferentes
+          tecnologías como HTML, CSS, JavaScript y React, entre otros. Me
+          encanta trabajar en equipo y aprender de otros desarrolladores para
+          seguir mejorando mis habilidades y ofrecer un trabajo de alta calidad.
+          Actualmente, estoy estudiando para convertirme en un desarrollador
+          FullStack y expandir mis habilidades para trabajar en proyectos más
+          grandes e integrados. Estoy emocionado por lo que el futuro me depara
+          y por las oportunidades que surgirán para seguir creciendo en mi
+          carrera. En mi portfolio, puedes encontrar algunos de mis proyectos,
+          en los que he trabajado en diferentes etapas de desarrollo, desde la
+          conceptualización hasta la implementación. Me encantaría compartir mis
+          conocimientos y experiencia contigo, así que no dudes en contactarme
+          si tienes alguna pregunta o si estás interesado en trabajar juntos.
+          ¡Gracias por visitar mi portfolio!
+        </p>
+        <a href="./paginas/curriculum.html" class="btn">Ver CV</a>
+      </section>
+      <section id="projects">
+        <h2>Proyectos</h2>
+        <div class="project-card">
+          <img src="./recursos/theindian.png" alt="Proyecto 1" />
+          <h3>The Indian Flavor Madrid</h3>
+          <p>
+            Este es un proyecto que desarrollé para un restaurante de comida
+            indú el cuál me pidieron hacer en WordPress
+          </p>
+          <a class="botonProyecto" href="http://theindianflavourmadrid.com/"
+            >Ver proyecto</a
+          >
+        </div>
+        <div class="project-card">
+          <img src="project-2.png" alt="Proyecto 2" />
+          <h3>Proyecto 2</h3>
+          <p>En este proyecto desarrollé...</p>
+          <a class="botonProyecto" href="">Ver proyecto</a>
+        </div>
+      </section>
+      <section id="contacto">
+        <h2>Contacto</h2>
+        <form action="https://formspree.io/f/xbjeynln" method="post">
+          <div class="input-group">
+            <label for="nombre">Nombre:</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Tu nombre..."
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Tu correo electrónico..."
+              required
+              
+            />
+          </div>
+          <div class="input-group">
+            <label for="mensaje">Mensaje:</label>
+            <textarea
+              id="mensaje"
+              name="message"
+              required
+              placeholder="Escribe tu mensaje..."
+            ></textarea>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>© 2023 Silvio Aguilar. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
