@@ -487,7 +487,7 @@ label {
   
 }
 
-input[type=text], input[type=email], input[type=password], select, textarea, input[type=date] {
+input[type=text], input[type=email], input[type=password], select, textarea,input[type=date] {
   margin-top: 5px;
   padding: 5px;
   border: 1px solid #ccc;
