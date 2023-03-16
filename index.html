@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Menu</title>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="fonts.css" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="index.js"></script>
+  </head>
+
+  <body>
+    <!-- Encabezado -->
+    <header>
+      <div class="menu_bar">
+        <a href="#" class="bt-menu">Menú <img class="iconoMenu" src="./recursos/iconoMenu.png"></a>
+        
+      </div>
+
+      <nav>
+        <ul>
+          <!-- Elementos del menú -->
+          <li>
+            <a href=""><span class="icon-house"></span>Inicio</a>
+          </li>
+          <li>
+            <a href="#"><span class="icon-suitcase"></span>Trabajos</a>
+          </li>
+          <!-- Elemento del menú con submenú -->
+          <li class="submenu">
+            <a href="#projects"
+              ><span class="icon-rocket"></span>Proyectos<span
+                class="caret icon-arrow-down6"
+              ></span
+            ></a>
+            <ul class="children">
+              <li>
+                <a href="#proyecto1">Restaurante Wordpress <span class="icon-dot"></span></a>
+              </li>
+              <li>
+                <a href="#proyecto2">Formulario de Registro<span class="icon-dot"></span></a>
+              </li>
+              <li>
+                <a href="#">Nuevo<span class="icon-dot"></span></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"><span class="icon-earth"></span>Servicios</a>
+          </li>
+          <li>
+            <a href="#contacto"><span class="icon-mail"></span>Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--Cuerpo de la web :)-->
+
+    <main>
+        <section id="hero">
+          <h1>Bienvenid@ a mi portfolio</h1>
+          <p>
+            ¡Hola! Soy Silvio Aguilar, un desarrollador de software FrontEnd
+            apasionado por la creación de experiencias únicas para los usuarios.
+            Disfruto trabajando con diferentes tecnologías como HTML, CSS,
+            JavaScript, React, entre otros.
+          </p>
+          <a href="#projects" class="btn">Ver proyectos</a>
+        </section>
+        <section id="about">
+          <h2>Sobre mí</h2>
+          <p>
+            Mi nombre es Silvio Aguilar, tengo 25 años y soy un desarrollador de
+            software apasionado por el FrontEnd y estudiando FullStack. Desde que
+            descubrí el mundo del desarrollo de software, he estado obsesionado
+            con crear experiencias increíbles para los usuarios y encontrar
+            soluciones creativas a los problemas de la vida real. Mi especialidad
+            es el desarrollo FrontEnd, en el que he trabajado con diferentes
+            tecnologías como HTML, CSS, JavaScript y React, entre otros. Me
+            encanta trabajar en equipo y aprender de otros desarrolladores para
+            seguir mejorando mis habilidades y ofrecer un trabajo de alta calidad.
+            Actualmente, estoy estudiando para convertirme en un desarrollador
+            FullStack y expandir mis habilidades para trabajar en proyectos más
+            grandes e integrados. Estoy emocionado por lo que el futuro me depara
+            y por las oportunidades que surgirán para seguir creciendo en mi
+            carrera. En mi portfolio, puedes encontrar algunos de mis proyectos,
+            en los que he trabajado en diferentes etapas de desarrollo, desde la
+            conceptualización hasta la implementación. Me encantaría compartir mis
+            conocimientos y experiencia contigo, así que no dudes en contactarme
+            si tienes alguna pregunta o si estás interesado en trabajar juntos.
+            ¡Gracias por visitar mi portfolio!
+          </p>
+          <a href="./paginas/curriculum.html" class="btn">Ver CV</a>
+        </section>
+        <section id="projects">
+          <h2>Proyectos</h2>
+          <div class="project-card" id="proyecto1">
+            <img src="./recursos/theindian.png" alt="Proyecto 1" />
+            <h3>The Indian Flavor Madrid</h3>
+            <p>
+              Este es un proyecto que desarrollé para un restaurante de comida
+              indú el cuál me pidieron hacer en WordPress
+            </p>
+            <a class="botonProyecto" href="http://theindianflavourmadrid.com/"
+              >Ver proyecto</a
+            >
+          </div>
+          <div class="project-card" id="proyecto2">
+            <img src="./recursos/formulario.png" alt="Proyecto 2" />
+            <h3>Proyecto 2</h3>
+            <p>En este proyecto desarrollé un formulario mdoerno de registro en HTML y CSS</p>
+            <a class="botonProyecto" href="./paginas/formulario.html"
+              >Ver proyecto</a
+            >
+          </div>
+        </section>
+        <section id="contacto">
+          <h2>Contacto</h2>
+          <form action="https://formspree.io/f/xbjeynln" method="post">
+            <div class="input-group">
+              <label for="nombre">Nombre:</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Tu nombre..."
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Tu correo electrónico..."
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label for="mensaje">Mensaje:</label>
+              <textarea
+                id="mensaje"
+                name="message"
+                required
+                placeholder="Escribe tu mensaje..."
+              ></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+          </form>
+        </section>
+      </main>
+      <footer>
+        <p>© 2023 Silvio Aguilar. Todos los derechos reservados.</p>
+      </footer>
+  </body>
+</html>
