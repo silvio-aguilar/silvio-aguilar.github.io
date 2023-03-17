@@ -20,7 +20,7 @@
 }
 .content{
   max-width: 1250px;
-  margin: 5px;
+  margin: auto;
   padding: 0 30px;
 }
 .navbar{
@@ -99,7 +99,7 @@
 }
 @media (max-width: 1100px) {
   .content{
-    padding: 0 40px;
+    padding: 0 20px;
   }
 }
 @media (max-width: 900px) {
@@ -199,6 +199,7 @@
     font-size: 3rem;
     margin-bottom: 1rem;
     color: rgb(50, 50, 50);
+    text-align: center;
   }
   
   #hero p {
@@ -206,6 +207,7 @@
     margin-bottom: 2rem;
     color: black;
     max-width: 800px;
+    text-align: left;
   }
   
   #hero .btn {
@@ -225,25 +227,28 @@
   /* Estilos para sobre mí */
   
   #about {
-    padding: 4rem 2rem;
+    padding: 0px;
     text-align: center;
+   
   }
   
   #about h2 {
     font-size: 2.5rem;
-    margin-bottom: 2rem;
+   
     color: #333;
   }
   
   #about p {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
+    
     color: #666;
     max-width: 800px;
-    margin: 0 auto 2rem auto;
+    margin: 0px;
+    text-align: left;
   }
   
   #about .btn {
+    margin: 20px;
     display: inline-block;
     background-color: #007bff;
     color: #fff;
@@ -260,8 +265,9 @@
   /* Estilos para proyectos */
   
   #projects {
-    padding: 4rem 2rem;
+    padding: 0px;
     text-align: center;
+    
   }
   
   #projects h2 {
@@ -272,12 +278,16 @@
   
   .project-card {
     margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 1px 0.1px 10px 0.1px gray;
+    padding: 1em;
   }
   
   .project-card img {
     width: 100%;
     height: auto;
     margin-bottom: 1rem;
+    border-radius: 5px;
   }
   
   .project-card h3 {
@@ -290,6 +300,7 @@
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
     color: #666;
+    text-align: center;
   }
   
   .botonProyecto {
