@@ -1,0 +1,137 @@
+ body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.diorama {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.background {
+    background-image: url('./imagenes/background.avif');
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.foreground {
+    background-image: url('./imagenes/.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.moveable-element {
+    background-image: url('./imagenes/foreground.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease;
+}
+ 
+
+
+.icono{
+    font-size: 25px;
+    animation: menu;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+/* @keyframes menu {
+    0%{
+        transform: scale(1);
+    }
+    50%
+    {
+        transform: scale(1.2)
+    }
+    100%{
+        transform: scale(1);
+    }
+    
+} */
+
+.container-menu{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 100vh;
+   
+}
+.menu{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.menu li{
+    position: absolute;
+    list-style: none;
+    transform-origin: 100px ;
+    left: 0;
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i)) ;
+    transform: rotate(0deg) translateX(80px);
+    
+   
+}
+.menu.active li {
+    transform: rotate(calc(360deg / 8 * var(--i)));
+}
+.menu li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    transform: rotate(calc(360deg / -8 * var(--i)));
+    box-shadow: 0 3px 4px rgba(0,0,0,0.15);
+    color: black;
+    transition: 0.5;
+}
+.menu li a :hover{
+    color: red;
+}
+
+.toggle{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 3px 4px rgba(0,0,0,0.15);
+    font-size: 2em;
+    transition: transform 1.25s;
+}
+
+.menu.active .toggle{
+    transform:rotate(315deg);
+}
