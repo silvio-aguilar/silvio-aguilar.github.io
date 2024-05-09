@@ -166,6 +166,22 @@
         document.getElementById('openCameraBtn').addEventListener('click', function() {
             document.getElementById('cameraInput').click();
         });
+
+        // Manejador de evento para cargar imagen desde la cámara
+        document.getElementById('cameraInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                const image = new Image();
+                image.src = e.target.result;
+                image.onload = function() {
+                    extractColors(image);
+                }
+            };
+
+            reader.readAsDataURL(file);
+        });
     </script>
 </body>
 </html>
