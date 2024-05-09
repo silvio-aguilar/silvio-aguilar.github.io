@@ -1,168 +1,173 @@
 <!DOCTYPE html>
 <!-- Created By Silvio Aguilar-->
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Silvio Aguilar</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
-<body>
-  <nav class="navbar">
-    <div class="content">
-      <div class="logo">
-        <a href="#">Home</a>
-      </div>
-      <ul class="menu-list">
-        <div class="icon cancel-btn">
-          <i class="fas fa-times"></i>
-        </div>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">Sobre mi</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="./paginas/aplicaciones.html">Apps</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-      <div class="icon menu-btn">
-        <i class="fas fa-bars"></i>
-      </div>
-    </div>
-  </nav>
-  <div class="banner"></div>
-  <div class="about">
-    <div class="content">
-      
-      <main>
-        <section id="hero">
-            <h1>Bienvenido</h1>
-          <p>
-            ¡Hola! Soy Silvio Aguilar, un desarrollador de software FrontEnd
-            apasionado por la creación de experiencias únicas para los usuarios.
-            Disfruto trabajando con diferentes tecnologías como HTML, CSS,
-            JavaScript, React, entre otros.
-          </p>
-          <a href="#projects" class="btn">Ver proyectos</a>
-        </section>
-        <section id="about">
-          <h2>Sobre mí</h2>
-          <p>
-            Mi nombre es Silvio Aguilar, tengo 25 años y soy un desarrollador de
-            software apasionado por el FrontEnd y estudiando FullStack. Desde que
-            descubrí el mundo del desarrollo de software, he estado obsesionado
-            con crear experiencias increíbles para los usuarios y encontrar
-            soluciones creativas a los problemas de la vida real. Mi especialidad
-            es el desarrollo FrontEnd, en el que he trabajado con diferentes
-            tecnologías como HTML, CSS, JavaScript y React, entre otros. Me
-            encanta trabajar en equipo y aprender de otros desarrolladores para
-            seguir mejorando mis habilidades y ofrecer un trabajo de alta calidad.
-            Actualmente, estoy estudiando para convertirme en un desarrollador
-            FullStack y expandir mis habilidades para trabajar en proyectos más
-            grandes e integrados. Estoy emocionado por lo que el futuro me depara
-            y por las oportunidades que surgirán para seguir creciendo en mi
-            carrera. En mi portfolio, puedes encontrar algunos de mis proyectos,
-            en los que he trabajado en diferentes etapas de desarrollo, desde la
-            conceptualización hasta la implementación. Me encantaría compartir mis
-            conocimientos y experiencia contigo, así que no dudes en contactarme
-            si tienes alguna pregunta o si estás interesado en trabajar juntos.
-            ¡Gracias por visitar mi portfolio!
-          </p>
-          <a href="./paginas/curriculum.html" class="btn">Ver CV</a>
-        </section>
-        <section id="projects">
-          <h2>Proyectos</h2>
-          <div class="project-card" id="proyecto1">
-            <img src="./recursos/theindian.png" alt="Proyecto 1" />
-            <h3>The Indian Flavor Madrid</h3>
-            <p>
-              Este es un proyecto que desarrollé para un restaurante de comida
-              indú el cuál me pidieron hacer en WordPress
-            </p>
-            <a class="botonProyecto" href="http://theindianflavourmadrid.com/"
-              >Ver proyecto</a
-            >
-          </div>
-          <div class="project-card" id="proyecto2">
-            <img src="./recursos/formulario.pn" alt="Página web inmobiliaria" />
-            <h3>Formulario de Registro</h3>
-            <p>En este proyecto desarrollé un formulario moderno de registro en HTML y CSS</p>
-            <a class="botonProyecto" href="./paginas/formulario.html"
-              >Ver proyecto</a
-            >
-          </div>
-            <div class="project-card" id="proyecto3">
-            <img src="./recursos/formulario.png" alt="Formulario de Registro" />
-            <h3>Formulario de Registro</h3>
-            <p>En este proyecto desarrollé un formulario moderno de registro en HTML y CSS</p>
-            <a class="botonProyecto" href="https://prickly-jeans.surge.sh"
-              >Ver proyecto</a
-            >
-          </div>
-        </section>
-        <section id="contacto">
-          <h2>Contacto</h2>
-          <form action="https://formspree.io/f/xbjeynln" method="post">
-            <div class="input-group">
-              <label for="nombre">Nombre:</label>
-              <input
-                type="text"
-                id="nombre"
-                name="nombre"
-                placeholder="Tu nombre..."
-                required
-              />
-            </div>
-            <div class="input-group">
-              <label for="email">Email:</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Tu correo electrónico..."
-                required
-              />
-            </div>
-            <div class="input-group">
-              <label for="mensaje">Mensaje:</label>
-              <textarea
-                id="mensaje"
-                name="message"
-                required
-                placeholder="Escribe tu mensaje..."
-              ></textarea>
-            </div>
-            <button type="submit">Enviar</button>
-          </form>
-        </section>
-      </main>
-      <footer>
-          <div class="badge-base LI-profile-badge" data-locale="es_ES" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="silvio-aguilar-b46003174" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://es.linkedin.com/in/silvio-aguilar-b46003174?trk=profile-badge">Silvio Aguilar</a></div>
-              
-              
-        <p>© 2023 Silvio Aguilar. Todos los derechos reservados.</p>
-      </footer>
-    </div>
-  </div>
 
-  <script>
-    const body = document.querySelector("body");
-    const navbar = document.querySelector(".navbar");
-    const menuBtn = document.querySelector(".menu-btn");
-    const cancelBtn = document.querySelector(".cancel-btn");
-    menuBtn.onclick = ()=>{
-      navbar.classList.add("show");
-      menuBtn.classList.add("hide");
-      body.classList.add("disabled");
-    }
-    cancelBtn.onclick = ()=>{
-      body.classList.remove("disabled");
-      navbar.classList.remove("show");
-      menuBtn.classList.remove("hide");
-    }
-    window.onscroll = ()=>{
-      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
-    }
+<body class="bg-gray-100">
+  <header class="bg-gray-100 shadow py-4 fixed top-0 w-full z-50">
+    <div class="container mx-auto flex justify-between items-center">
+        <div class="logo">
+            <a href="#" class="text-black font-bold text-lg">SILVIO AGUILAR</a>
+        </div>
+        <div class="menu-btn md:hidden">
+            <button id="menuBtn" class="text-black focus:outline-none">
+                <i id="menuIcon" class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <ul id="menuList" class="hidden md:flex md:items-center md:space-x-6 justify-center md:justify-end">
+            <li><a href="#hero" class="text-black font-bold">Home</a></li>
+            <li><a href="#about" class="text-black font-bold">Sobre mi</a></li>
+            <li><a href="#projects" class="text-black font-bold">Proyectos</a></li>
+            <li><a href="#contacto" class="text-black font-bold">Contacto</a></li>
+        </ul>
+    </div>
+</header>
+
+
+    <div class="banner h-64 bg-gray-900">
+      <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+    <dotlottie-player src="https://lottie.host/9dbc16c5-057b-43c4-a3a0-78e99d79fc65/C9mf7ExMCL.json" background="transparent" speed="1" style="width: 300px; height: 350px;" loop autoplay></dotlottie-player>
+    </div>
+    <div class="about py-8 px-4">
+        <main class="container mx-auto">
+            <section id="hero" class="text-center my-8">
+                <h1 class="text-3xl font-bold">Bienvenido/a</h1>
+                <p class="my-4">
+                    ¡Hola! Soy Silvio Aguilar, desarrollador de software,
+                    me apasiona sobre todo el Frontend aun que tengo un perfil FullStack!
+                    Aquí puedes ver todos mis proyectos y mucho más!
+                </p>
+                <a href="#projects"
+                    class="bg-blue-500 py-2 px-4 rounded text-white hover:bg-blue-700">Ver proyectos</a>
+            </section>
+            <section id="about" class="my-8">
+                <h2 class="text-xl font-bold mb-4">Sobre mí</h2>
+                <p class="text-center mb-4">
+                    Mi nombre es Silvio Aguilar, tengo 25 años y soy un desarrollador de
+                    software apasionado por el FrontEnd y estudiando FullStack. Desde que
+                    descubrí el mundo del desarrollo de software, he estado obsesionado
+                    con crear experiencias increíbles para los usuarios y encontrar
+                    soluciones creativas a los problemas de la vida real. Mi especialidad
+                    es el desarrollo FrontEnd, en el que he trabajado con diferentes
+                    tecnologías como HTML, CSS, JavaScript y React, entre otros. Me
+                    encanta trabajar en equipo y aprender de otros desarrolladores para
+                    seguir mejorando mis habilidades y ofrecer un trabajo de alta calidad.
+                    Actualmente, estoy estudiando para convertirme en un desarrollador
+                    FullStack y expandir mis habilidades para trabajar en proyectos más
+                    grandes e integrados. Estoy emocionado por lo que el futuro me depara
+                    y por las oportunidades que surgirán para seguir creciendo en mi
+                    carrera. En mi portfolio, puedes encontrar algunos de mis proyectos,
+                    en los que he trabajado en diferentes etapas de desarrollo, desde la
+                    conceptualización hasta la implementación. Me encantaría compartir mis
+                    conocimientos y experiencia contigo, así que no dudes en contactarme
+                    si tienes alguna pregunta o si estás interesado en trabajar juntos.
+                    ¡Gracias por visitar mi portfolio!
+                </p>
+                <a href="./paginas/curriculum.html"
+                    class="bg-blue-500 hover:bg-blue-700 rounded py-2 px-4 text-white mt-4">Ver CV</a>
+            </section>
+            <section id="projects" class="my-8">
+                <h2 class="text-xl font-bold mb-4">Proyectos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="project-card bg-white p-4 rounded-lg shadow-md">
+                        <img class="w-full h-32 object-cover mb-4" src="./recursos/fotosApps/MiniPaintPortable.png"
+                            alt="Proyecto 1" />
+                        <h3 class="text-lg font-bold mb-2">Mini Paint Portable</h3>
+                        <p class="mb-4">He creado una versión reducida del mítico Paint,
+                            está hecho en un solo archivo con Html, Css y Js así que
+                            puedes compartirlo y utilizarlo en cualquier sitio, como en Whatsapp por ejemplo.</p>
+                        <button
+                            class="bg-blue-500 hover:bg-blue-700 rounded py-2 px-4 text-white font-bold"><a
+                                href="./aplicaciones/miniPaint.html" target="_blank" >Ver proyecto</a></button>
+                        <button
+                            class="bg-blue-500 hover:bg-blue-700 rounded py-2 px-4 text-white font-bold"><a
+                                download="miniPaint.html" href="./aplicaciones/miniPaint.html">Descargar</a></button>
+                    </div>
+                    <div class="project-card bg-white p-4 rounded-lg shadow-md">
+                        <img class="w-full h-32 object-cover mb-4" src="./recursos/theindian.png"
+                            alt="Proyecto 2" />
+                        <h3 class="text-lg font-bold mb-2">The Indian Flavor Madrid</h3>
+                        <p class="mb-4">Este es un proyecto que desarrollé para un restaurante de comida
+                            indú el cuál me pidieron hacer en WordPress</p>
+                        <a href="http://theindianflavourmadrid.com/"
+                            class="bg-blue-500 hover:bg-blue-700 rounded py-2 px-4 text-white font-bold">Ver
+                            proyecto</a>
+                    </div>
+                    <div class="project-card bg-white p-4 rounded-lg shadow-md">
+                        <img class="w-full h-32 object-cover mb-4" src="./recursos/formulario.png"
+                            alt="Proyecto 3" />
+                        <h3 class="text-lg font-bold mb-2">Formulario de Registro</h3>
+                        <p class="mb-4">En este proyecto desarrollé un formulario moderno de registro en HTML y CSS</p>
+                        <a href="https://prickly-jeans.surge.sh"
+                            class="bg-blue-500 hover:bg-blue-700 rounded py-2 px-4 text-white font-bold">Ver
+                            proyecto</a>
+                    </div>
+                </div>
+            </section>
+            <section id="contacto" class="my-8">
+                <h2 class="text-xl font-bold mb-4">Contacto</h2>
+                <form action="https://formspree.io/f/xbjeynln" method="post">
+                    <div class="input-group mb-4">
+                        <label for="nombre" class="block">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre..."
+                            class="w-full px-3 py-2 border rounded-lg" required />
+                    </div>
+                    <div class="input-group mb-4">
+                        <label for="email" class="block">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Tu correo electrónico..."
+                            class="w-full px-3 py-2 border rounded-lg" required />
+                    </div>
+                    <div class="input-group mb-4">
+                        <label for="mensaje" class="block">Mensaje:</label>
+                        <textarea id="mensaje" name="message" required
+                            placeholder="Escribe tu mensaje..."
+                            class="w-full px-3 py-2 border rounded-lg"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="bg-blue-500 hover:bg-blue-700 rounded-lg py-2 px-4 text-white font-bold">Enviar</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-4 text-center">
+        <div class="mb-4">
+            <div class="LI-profile-badge" data-locale="es_ES" data-size="medium" data-theme="light"
+                data-type="VERTICAL" data-vanity="silvio-aguilar-b46003174" data-version="v1"><a
+                    class="badge-base__link LI-simple-link"
+                    href="https://es.linkedin.com/in/silvio-aguilar-b46003174?trk=profile-badge">Silvio
+                    Aguilar</a></div>
+        </div>
+        <p>© 2024 Silvio Aguilar. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+      const menuBtn = document.getElementById("menuBtn");
+      const menuIcon = document.getElementById("menuIcon");
+      const menuList = document.getElementById("menuList");
+  
+      menuBtn.addEventListener("click", () => {
+          menuList.classList.toggle("hidden");
+          if (menuList.classList.contains("hidden")) {
+              // Si el menú está cerrado, muestra el icono de hamburguesa a la derecha
+              menuIcon.classList.remove("fa-times");
+              menuIcon.classList.add("fa-bars");
+          } else {
+              // Si el menú está abierto, muestra el icono de equis a la derecha
+              menuIcon.classList.remove("fa-bars");
+              menuIcon.classList.add("fa-times");
+          }
+      });
   </script>
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </body>
+
 </html>
