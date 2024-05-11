@@ -1,196 +1,201 @@
 <!DOCTYPE html>
-<!-- Created By Silvio Aguilar-->
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Silvio Aguilar</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Agrega estilos personalizados si es necesario */
+    </style>
 </head>
+<body>
 
-<body class="bg-gray-100">
-    <header class="bg-gray-100 shadow p-2 py-4 fixed top-0 w-full z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="logo">
-                <a href="#" class="text-black font-bold text-lg">SILVIO AGUILAR</a>
-            </div>
-            <div class="menu-btn md:hidden">
-                <button id="menuBtn" class="text-black focus:outline-none">
-                    <i id="menuIcon" class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
-            <ul id="menuList" class="hidden md:flex md:items-center md:space-x-6 justify-center md:justify-end">
-                <li><a href="#hero" class="text-black font-bold">Home</a></li>
-                <li><a href="#about" class="text-black font-bold">Sobre mi</a></li>
-                <li><a href="#projects" class="text-black font-bold">Proyectos</a></li>
-                <li><a href="#contacto" class="text-black font-bold">Contacto</a></li>
+<nav class="bg-white border-gray-200 dark:bg-gray-900 shadow fixed w-full">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="./assets/images/fotoPerfilSilvio.jpg" class="h-8" alt="Silvio Aguilar Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Silvio Aguilar</span>
+        </a>
+        <div class="flex md:order-2">
+            <button id="toggle-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-search" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+            </button>
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+            <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                <li>
+                    <a href="#proyectos" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Proyectos</a>
+                </li>
+                <li>
+                    <a href="#contacto" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contacto</a>
+                </li>
+                <li>
+                    <a href="#colegas" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Colegas</a>
+                </li>
             </ul>
         </div>
-    </header>
-
-    <div class="banner h-70 bg-gray-900 flex justify-center items-center">
-        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-            type="module"></script>
-        <dotlottie-player src="https://lottie.host/9dbc16c5-057b-43c4-a3a0-78e99d79fc65/C9mf7ExMCL.json"
-            background="transparent" speed="0.5" style="width: 300px; height: 350px;" loop autoplay></dotlottie-player>
     </div>
+</nav>
+<br>
+<br><br>
+<section class="p-5 max-w-1.5 ">
+    <p class="text-3xl font-bold">Bienvenido/a</p>
+    <p >
+        ¡Hola! Soy Silvio Aguilar, 
+        desarrollador de software. Me apasiona sobre 
+        todo el Frontend, aunque tengo un perfil FullStack.
+        ¡Aquí puedes ver todos mis proyectos y mucho más!</p>
+</section>
 
-    <div class="about py-8 px-4">
-        <main class="container mx-auto">
-            <section id="hero" class="text-center my-8">
-                <h1 class="text-3xl font-bold">Bienvenido/a</h1>
-                <p class="my-4">
-                    ¡Hola! Soy Silvio Aguilar, desarrollador de software,
-                    me apasiona sobre todo el Frontend aun que tengo un perfil FullStack!
-                    Aquí puedes ver todos mis proyectos y mucho más!
-                </p>
-                <a href="#projects"
-                    class="bg-blue-500 py-2 px-4 rounded text-white hover:bg-blue-700">Ver proyectos</a>
-            </section>
-            <section id="about" class="my-8">
-                <h2 class="text-xl font-bold mb-4">Sobre mí</h2>
-                <p class="text-center mb-4">
-
-                    Tengo 26 años y soy un desarrollador FullStack
-                    apasionado por crear experiencias increíbles para los
-                    usuarios. Especializado en FrontEnd con HTML, CSS, Tailwind
-                    JavaScript, TypeScript, React, React Native ( móviles ) y muchos muchos más!. Me encanta colaborar en equipo
-                    y estoy emocionado por seguir creciendo en mi carrera, si tienes algún proyecto en mente
-                    y quieres ayuda, yo soy tu profesional ;). sígueme en redes como @kurzerhand!
-                    ¡Gracias por visitar mi portfolio!
-                </p>
-                <a href="./paginas/curriculum.html"
-                    class="bg-blue-500 hover:bg-blue-700 rounded py-2 px-4 text-white mt-4">Ver CV</a>
-            </section>
-            <section id="projects" class="my-8">
-                <h2 class="text-xl font-bold mb-4">Proyectos</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- HERRAMIENTA DE GENERAR PATRONES DE COLORES -->
-                    <div class="project-card bg-white p-4 rounded-lg shadow-md">
-                        <img class="w-full h-40 object-contain mb-4 "
-                            src="./recursos/fotosApps/PatronColor.png" alt="Proyecto 1" />
-                        <h3 class="text-lg font-bold mb-2">Generador de Patrones de Colores</h3>
-                        <p class="mb-4">Hoy estoy algo perezoso así que he creado un Generador
-                            de patrones de colores que funciona con solo un botón, por si,
-                            como yo, estás algo perezoso o sin creatividad. Espero lo disfrutes! :D
-                        </p>
-                        <button
-                            class="bg-blue-500 hover:bg-blue-700 rounded py-2 px-4 text-white font-bold"><a
-                                href="./aplicaciones/colored.html" target="_blank">Ver proyecto</a></button>
-                        <button
-                            class="bg-blue-500 hover:bg-blue-700 rounded py-2 px-4 text-white font-bold"><a
-                                download="colored.html" href="./aplicaciones/colored.html">Descargar</a></button>
-                    </div>
-                    <!-- FIN DE HERRAMIENTA DE GENERAR PATRONES DE COLORES -->
-                    <!-- BUSCADOR DE PALETA DE COLORES -->
-                    <div class="project-card bg-white p-4 rounded-lg shadow-md">
-                        <img class="w-full h-40 object-contain mb-4"
-                            src="./recursos/fotosApps/PaletteFinder.png" alt="Proyecto 1" />
-                        <h3 class="text-lg font-bold mb-2">Buscador de paleta de Colores</h3>
-                        <p class="mb-4">Un pequeño generador de paletas de colores a partir de una imagen dada,
-                            puede ser una herramienta de gran utilidad si no estás creativo o si quieres jugar.
-                        </p>
-                        <button
-                            class="bg-blue-500 hover:bg-blue-700 rounded py-2 px-4 text-white font-bold"><a
-                                href="./aplicaciones/buscarPaleta.html" target="_blank">Ver proyecto</a></button>
-                        <button
-                            class="bg-blue-500 hover:bg-blue-700 rounded py-2 px-4 text-white font-bold"><a
-                                download="buscarPaleta.html" href="./aplicaciones/buscarPaleta.html">Descargar</a></button>
-                    </div>
-                    <!-- FIN BUSCADOR DE PALETA DE COLORES -->
-                    <div class="project-card bg-white p-4 rounded-lg shadow-md">
-                        <img class="w-full h-40 object-contain mb-4"
-                            src="./recursos/fotosApps/MiniPaintPortable.png" alt="Proyecto 1" />
-                        <h3 class="text-lg font-bold mb-2">Mini Paint Portable</h3>
-                        <p class="mb-4">He creado una versión reducida del mítico Paint,
-                            está hecho en un solo archivo con Html, Css y Js así que
-                            puedes compartirlo y utilizarlo en cualquier sitio, como en Whatsapp por ejemplo.</p>
-                        <button
-                            class="bg-blue-500 hover:bg-blue-700 rounded py-2 px-4 text-white font-bold"><a
-                                href="./aplicaciones/miniPaint.html" target="_blank">Ver proyecto</a></button>
-                        <button
-                            class="bg-blue-500 hover:bg-blue-700 rounded py-2 px-4 text-white font-bold"><a
-                                download="miniPaint.html" href="./aplicaciones/miniPaint.html">Descargar</a></button>
-                    </div>
-                    <div class="project-card bg-white p-4 rounded-lg shadow-md">
-                        <img class="w-full h-40 object-contain mb-4" src="./recursos/theindian.png"
-                            alt="Proyecto 2" />
-                        <h3 class="text-lg font-bold mb-2">The Indian Flavor Madrid</h3>
-                        <p class="mb-4">Este es un proyecto que desarrollé para un restaurante de comida
-                            indú el cuál me pidieron hacer en WordPress</p>
-                        <a href="http://theindianflavourmadrid.com/"
-                            class="bg-blue-500 hover:bg-blue-700 rounded py-2 px-4 text-white font-bold">Ver
-                            proyecto</a>
-                    </div>
-                    <div class="project-card bg-white p-4 rounded-lg shadow-md">
-                        <img class="w-full h-40 object-contain mb-4" src="./recursos/formulario.png"
-                            alt="Proyecto 3" />
-                        <h3 class="text-lg font-bold mb-2">Formulario de Registro</h3>
-                        <p class="mb-4">En este proyecto desarrollé un formulario moderno de registro en HTML y CSS</p>
-                        <a href="https://prickly-jeans.surge.sh"
-                            class="bg-blue-500 hover:bg-blue-700 rounded py-2 px-4 text-white font-bold">Ver
-                            proyecto</a>
-                    </div>
+<main class="mt-10">
+    <div id="proyectos" class="px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- CARD -->
+            <div class="rounded border p-4 shadow">
+                <img src="./assets/images/PatronColor.png" alt="proyecto" class="w-full h-48 object-cover mb-4">
+                <p class="text-lg font-bold mb-2">Generador de patrones de colores</p>
+                <p class="text-sm text-gray-600 mb-4">Hoy estoy algo perezoso así que he creado un Generador de patrones de colores que funciona con solo un botón, por si, como yo, estás algo perezoso o sin creatividad. Espero lo disfrutes! :D</p>
+                <div class="flex justify-between gap-4">
+                    <a href="./proyectos/colored.html">
+                        <button class="bg-black hover:bg-transparent border-2 border-black hover:text-black transition duration-300 text-white font-bold py-2 px-4 rounded-lg">
+                            Ver proyecto
+                        </button>
+                    </a>
+                    <a href="./proyectos/colored.html" download="colored.html">
+                        <button class="bg-black hover:bg-transparent border-2 border-black hover:text-black transition duration-300 text-white font-bold py-2 px-4 rounded-lg">
+                            Descargar
+                        </button>
+                    </a>
                 </div>
-            </section>
-            <section id="contacto" class="my-8">
-                <h2 class="text-xl font-bold mb-4">Contacto</h2>
-                <form action="https://formspree.io/f/xbjeynln" method="post">
-                    <div class="input-group mb-4">
-                        <label for="nombre" class="block">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre..."
-                            class="w-full px-3 py-2 border rounded-lg" required />
-                    </div>
-                    <div class="input-group mb-4">
-                        <label for="email" class="block">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Tu correo electrónico..."
-                            class="w-full px-3 py-2 border rounded-lg" required />
-                    </div>
-                    <div class="input-group mb-4">
-                        <label for="mensaje" class="block">Mensaje:</label>
-                        <textarea id="mensaje" name="message" required
-                            placeholder="Escribe tu mensaje..."
-                            class="w-full px-3 py-2 border rounded-lg"></textarea>
-                    </div>
-                    <button type="submit"
-                        class="bg-blue-500 hover:bg-blue-700 rounded-lg py-2 px-4 text-white font-bold">Enviar</button>
-                </form>
-            </section>
-        </main>
-    </div>
+            </div>
+            
+            
 
-    <footer class="bg-gray-800 text-white py-4 text-center">
-        <div class="mb-4">
-            <div class="LI-profile-badge" data-locale="es_ES" data-size="medium" data-theme="light"
-                data-type="VERTICAL" data-vanity="silvio-aguilar-b46003174" data-version="v1"><a
-                    class="badge-base__link LI-simple-link"
-                    href="https://es.linkedin.com/in/silvio-aguilar-b46003174?trk=profile-badge">Silvio
-                    Aguilar</a></div>
+            <!-- CARD -->
+            <div class="rounded border p-4 shadow">
+                <img src="./assets/images/PaletteFinder.png" alt="proyecto" class="w-full h-48 object-cover mb-4">
+                <p class="text-lg font-bold mb-2">Generador de paletas de colores</p>
+                <p class="text-sm text-gray-600 mb-4">Un pequeño generador de paletas de colores a partir de una imagen dada, puede ser una herramienta de gran utilidad si no estás creativo o si quieres jugar.</p>
+                <div class="flex justify-between gap-4">
+                    <a href="./proyectos/buscarPaleta.html">
+                        <button class="bg-black hover:bg-transparent border-2 border-black hover:text-black transition duration-300 text-white font-bold py-2 px-4 rounded-lg">
+                            Ver proyecto
+                        </button>
+                    </a>
+                    <a href="./proyectos/buscarPaleta.html" download="buscarPaleta.html">
+                        <button class="bg-black hover:bg-transparent border-2 border-black hover:text-black transition duration-300 text-white font-bold py-2 px-4 rounded-lg">
+                            Descargar
+                        </button>
+                    </a>
+                </div>
+            </div>
+            
+
+            <!-- CARD -->
+            <div class="rounded border p-4 shadow">
+                <img src="./assets/images/MiniPaintPortable.png" alt="proyecto" class="w-full h-48 object-cover mb-4">
+                <p class="text-lg font-bold mb-2">Mini Paint Portable</p>
+                <p class="text-sm text-gray-600 mb-4">He creado una versión reducida del mítico Paint, está hecho en un solo archivo con Html, Css y Js así que puedes compartirlo y utilizarlo en cualquier sitio, como en Whatsapp por ejemplo.</p>
+                <div class="flex justify-between gap-4">
+                    <a href="./proyectos/miniPaint.html">
+                        <button class="bg-black hover:bg-transparent border-2 border-black hover:text-black transition duration-300 text-white font-bold py-2 px-4 rounded-lg">
+                            Ver proyecto
+                        </button>
+                    </a>
+                    <a href="./proyectos/miniPaint.html" download="miniPaint.html">
+                        <button class="bg-black hover:bg-transparent border-2 border-black hover:text-black transition duration-300 text-white font-bold py-2 px-4 rounded-lg">
+                            Descargar
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            
+            <!-- CARD -->
         </div>
-        <p>© 2024 Silvio Aguilar. Todos los derechos reservados.</p>
-    </footer>
+    </div>
+</main>
+<br>
+<br>
+<hr>
+<!-- CONTACTO -->
+<div class="max-w-sm mx-auto">
+    <section id="contacto" class="my-8">
+        <h2 class="text-lg sm:text-xl font-bold mb-4 text-center">Contacto</h2>
+        <form action="https://formspree.io/f/xbjeynln" method="post">
+            <div class="input-group mb-4">
+                <label for="nombre" class="block">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre..."
+                    class="w-full px-3 py-2 border rounded-lg" required />
+            </div>
+            <div class="input-group mb-4">
+                <label for="email" class="block">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Tu correo electrónico..."
+                    class="w-full px-3 py-2 border rounded-lg" required />
+            </div>
+            <div class="input-group mb-4">
+                <label for="mensaje" class="block">Mensaje:</label>
+                <textarea id="mensaje" name="message" required
+                    placeholder="Escribe tu mensaje..."
+                    class="w-full px-3 py-2 border rounded-lg"></textarea>
+            </div>
+            <button type="submit"
+                class="w-full bg-blue-500 hover:bg-blue-700 rounded-lg py-2 px-4 text-white font-bold">Enviar</button>
+        </form>
+    </section>
+</div>
 
-    <script>
-        const menuBtn = document.getElementById("menuBtn");
-        const menuIcon = document.getElementById("menuIcon");
-        const menuList = document.getElementById("menuList");
 
-        menuBtn.addEventListener("click", () => {
-            menuList.classList.toggle("hidden");
-            if (menuList.classList.contains("hidden")) {
-                // Si el menú está cerrado, muestra el icono de hamburguesa a la derecha
-                menuIcon.classList.remove("fa-times");
-                menuIcon.classList.add("fa-bars");
-            } else {
-                // Si el menú está abierto, muestra el icono de equis a la derecha
-                menuIcon.classList.remove("fa-bars");
-                menuIcon.classList.add("fa-times");
-            }
-        });
-    </script>
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+<!-- FOOTER -->
+
+<footer class="bg-gray-900 text-white py-8 mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Columna 1: Información de contacto -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Contacto</h3>
+                <p class="mb-2">Correo electrónico: silvioaguilartorres@outlook.com</p>
+                <p class="mb-2">Teléfono: +34 643081159</p>
+                <p class="mb-2">Dirección: Madrid / Cáceres - Spain</p>
+            </div>
+
+            <!-- Columna 2: Enlaces -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Enlaces</h3>
+                <ul>
+                    <li><a href="#" class="hover:text-gray-400">Inicio</a></li>
+                    <li><a href="#proyectos" class="hover:text-gray-400">Proyectos</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Servicios</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Redes sociales -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Redes Sociales</h3>
+                <ul>
+                    <li><a href="#" class="hover:text-gray-400">Facebook</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Twitter</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Instagram</a></li>
+                    <li><a href="#" class="hover:text-gray-400">LinkedIn</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 4: Información adicional -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Información Adicional</h3>
+                <p>© 2024 Todos los derechos reservados</p>
+                <p>Desarrollado por: Silvio Aguilar</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="script.js"></script>
 </body>
-
 </html>
