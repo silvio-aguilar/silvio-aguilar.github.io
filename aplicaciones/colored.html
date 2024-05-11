@@ -32,7 +32,7 @@
                 const colors = generateRandomColors();
                 const gradientColors = colors.join(', ');
                 
-                patternPreview.style.backgroundImage = `repeating-linear-gradient(10deg, ${gradientColors})`;
+                patternPreview.style.backgroundImage = `repeating-linear-gradient(90deg, ${gradientColors})`;
                 hexColors.textContent = "Hex: " + colors.join(', ');
                 rgbColors.textContent = "RGB: " + colors.map(color => {
                     const rgb = hexToRgb(color);

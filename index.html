@@ -11,30 +11,31 @@
 </head>
 
 <body class="bg-gray-100">
-  <header class="bg-gray-100 shadow py-4 fixed top-0 w-full z-50">
-    <div class="container mx-auto flex justify-between items-center">
-        <div class="logo">
-            <a href="#" class="text-black font-bold text-lg">SILVIO AGUILAR</a>
+    <header class="bg-gray-100 shadow p-2 py-4 fixed top-0 w-full z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="logo">
+                <a href="#" class="text-black font-bold text-lg">SILVIO AGUILAR</a>
+            </div>
+            <div class="menu-btn md:hidden">
+                <button id="menuBtn" class="text-black focus:outline-none">
+                    <i id="menuIcon" class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <ul id="menuList" class="hidden md:flex md:items-center md:space-x-6 justify-center md:justify-end">
+                <li><a href="#hero" class="text-black font-bold">Home</a></li>
+                <li><a href="#about" class="text-black font-bold">Sobre mi</a></li>
+                <li><a href="#projects" class="text-black font-bold">Proyectos</a></li>
+                <li><a href="#contacto" class="text-black font-bold">Contacto</a></li>
+            </ul>
         </div>
-        <div class="menu-btn md:hidden">
-            <button id="menuBtn" class="text-black focus:outline-none">
-                <i id="menuIcon" class="fas fa-bars text-2xl"></i>
-            </button>
-        </div>
-        <ul id="menuList" class="hidden md:flex md:items-center md:space-x-6 justify-center md:justify-end">
-            <li><a href="#hero" class="text-black font-bold">Home</a></li>
-            <li><a href="#about" class="text-black font-bold">Sobre mi</a></li>
-            <li><a href="#projects" class="text-black font-bold">Proyectos</a></li>
-            <li><a href="#contacto" class="text-black font-bold">Contacto</a></li>
-        </ul>
+    </header>
+
+    <div class="banner h-70 bg-gray-900 flex justify-center items-center">
+        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+            type="module"></script>
+        <dotlottie-player src="https://lottie.host/9dbc16c5-057b-43c4-a3a0-78e99d79fc65/C9mf7ExMCL.json"
+            background="transparent" speed="0.5" style="width: 300px; height: 350px;" loop autoplay></dotlottie-player>
     </div>
-</header>
-
-
-<div class="banner h-70 bg-gray-900 flex justify-center items-center">
-  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
-  <dotlottie-player src="https://lottie.host/9dbc16c5-057b-43c4-a3a0-78e99d79fc65/C9mf7ExMCL.json" background="transparent" speed="0.5" style="width: 300px; height: 350px;" loop autoplay></dotlottie-player>
-</div>
 
     <div class="about py-8 px-4">
         <main class="container mx-auto">
@@ -51,14 +52,14 @@
             <section id="about" class="my-8">
                 <h2 class="text-xl font-bold mb-4">Sobre mí</h2>
                 <p class="text-center mb-4">
-                    
-¡Hola! Soy Silvio Aguilar, tengo 26 años y soy un desarrollador FullStack 
-apasionado por crear experiencias increíbles para los
- usuarios. Especializado en FrontEnd con HTML, CSS, Tailwind
-  JavaScript, TypeScript, React, React Native ( móviles ) y muchos muchos más!. Me encanta colaborar en equipo
-   y estoy emocionado por seguir creciendo en mi carrera, si tienes algún proyecto en mente
-   y quieres ayuda, yo soy tu profesional ;). sigueme en redes como @kurzerhand!
-    ¡Gracias por visitar mi portfolio!
+
+                    Tengo 26 años y soy un desarrollador FullStack
+                    apasionado por crear experiencias increíbles para los
+                    usuarios. Especializado en FrontEnd con HTML, CSS, Tailwind
+                    JavaScript, TypeScript, React, React Native ( móviles ) y muchos muchos más!. Me encanta colaborar en equipo
+                    y estoy emocionado por seguir creciendo en mi carrera, si tienes algún proyecto en mente
+                    y quieres ayuda, yo soy tu profesional ;). sígueme en redes como @kurzerhand!
+                    ¡Gracias por visitar mi portfolio!
                 </p>
                 <a href="./paginas/curriculum.html"
                     class="bg-blue-500 hover:bg-blue-700 rounded py-2 px-4 text-white mt-4">Ver CV</a>
@@ -66,66 +67,49 @@ apasionado por crear experiencias increíbles para los
             <section id="projects" class="my-8">
                 <h2 class="text-xl font-bold mb-4">Proyectos</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-
-                    <!-- HERRAMIENTA DE TIPOGRAFÍA -->
-                    <div class="project-card bg-white p-1 rounded-lg shadow-md">
-                        <img class="w-full h-40 object-contain mb-4 " src="./recursos/fotosApps/PatronColor.png"
-                            alt="Proyecto 1" />
+                    <!-- HERRAMIENTA DE GENERAR PATRONES DE COLORES -->
+                    <div class="project-card bg-white p-4 rounded-lg shadow-md">
+                        <img class="w-full h-40 object-contain mb-4 "
+                            src="./recursos/fotosApps/PatronColor.png" alt="Proyecto 1" />
                         <h3 class="text-lg font-bold mb-2">Generador de Patrones de Colores</h3>
-                        <p class="mb-4">Hoy estoy algo perezoso asi que he creado un Generador
+                        <p class="mb-4">Hoy estoy algo perezoso así que he creado un Generador
                             de patrones de colores que funciona con solo un botón, por si,
                             como yo, estás algo perezoso o sin creatividad. Espero lo disfrutes! :D
                         </p>
                         <button
                             class="bg-blue-500 hover:bg-blue-700 rounded py-2 px-4 text-white font-bold"><a
-                                href="./aplicaciones/colored.html" target="_blank" >Ver proyecto</a></button>
+                                href="./aplicaciones/colored.html" target="_blank">Ver proyecto</a></button>
                         <button
                             class="bg-blue-500 hover:bg-blue-700 rounded py-2 px-4 text-white font-bold"><a
                                 download="colored.html" href="./aplicaciones/colored.html">Descargar</a></button>
                     </div>
-
-                    <!-- FIN DE HERRAMIENTA DE TIPOGRAFÍA -->
-
-
-
-
-
-
-
-
-
-
+                    <!-- FIN DE HERRAMIENTA DE GENERAR PATRONES DE COLORES -->
                     <!-- BUSCADOR DE PALETA DE COLORES -->
                     <div class="project-card bg-white p-4 rounded-lg shadow-md">
-                      <img class="w-full h-40 object-contain mb-4" src="./recursos/fotosApps/PaletteFinder.png"
-                          alt="Proyecto 1" />
-                      <h3 class="text-lg font-bold mb-2">Buscador de paleta de Colores</h3>
-                      <p class="mb-4">Un pequeño generador de paletas de colores a partir de una imagen dada,
-                        puede ser una herramienta de gran utilidad si no estás creativo o si quieres jugar.
-                      </p>
-                      <button
-                          class="bg-blue-500 hover:bg-blue-700 rounded py-2 px-4 text-white font-bold"><a
-                              href="./aplicaciones/buscarPaleta.html" target="_blank" >Ver proyecto</a></button>
-                      <button
-                          class="bg-blue-500 hover:bg-blue-700 rounded py-2 px-4 text-white font-bold"><a
-                              download="buscarPaleta.html" href="./aplicaciones/buscarPaleta.html">Descargar</a></button>
-                  </div>
-
-                  <!-- FIN BUSCADOR DE PALETA DE COLORES -->
-
-
-
+                        <img class="w-full h-40 object-contain mb-4"
+                            src="./recursos/fotosApps/PaletteFinder.png" alt="Proyecto 1" />
+                        <h3 class="text-lg font-bold mb-2">Buscador de paleta de Colores</h3>
+                        <p class="mb-4">Un pequeño generador de paletas de colores a partir de una imagen dada,
+                            puede ser una herramienta de gran utilidad si no estás creativo o si quieres jugar.
+                        </p>
+                        <button
+                            class="bg-blue-500 hover:bg-blue-700 rounded py-2 px-4 text-white font-bold"><a
+                                href="./aplicaciones/buscarPaleta.html" target="_blank">Ver proyecto</a></button>
+                        <button
+                            class="bg-blue-500 hover:bg-blue-700 rounded py-2 px-4 text-white font-bold"><a
+                                download="buscarPaleta.html" href="./aplicaciones/buscarPaleta.html">Descargar</a></button>
+                    </div>
+                    <!-- FIN BUSCADOR DE PALETA DE COLORES -->
                     <div class="project-card bg-white p-4 rounded-lg shadow-md">
-                        <img class="w-full h-40 object-contain mb-4" src="./recursos/fotosApps/MiniPaintPortable.png"
-                            alt="Proyecto 1" />
+                        <img class="w-full h-40 object-contain mb-4"
+                            src="./recursos/fotosApps/MiniPaintPortable.png" alt="Proyecto 1" />
                         <h3 class="text-lg font-bold mb-2">Mini Paint Portable</h3>
                         <p class="mb-4">He creado una versión reducida del mítico Paint,
                             está hecho en un solo archivo con Html, Css y Js así que
                             puedes compartirlo y utilizarlo en cualquier sitio, como en Whatsapp por ejemplo.</p>
                         <button
                             class="bg-blue-500 hover:bg-blue-700 rounded py-2 px-4 text-white font-bold"><a
-                                href="./aplicaciones/miniPaint.html" target="_blank" >Ver proyecto</a></button>
+                                href="./aplicaciones/miniPaint.html" target="_blank">Ver proyecto</a></button>
                         <button
                             class="bg-blue-500 hover:bg-blue-700 rounded py-2 px-4 text-white font-bold"><a
                                 download="miniPaint.html" href="./aplicaciones/miniPaint.html">Descargar</a></button>
@@ -189,23 +173,23 @@ apasionado por crear experiencias increíbles para los
     </footer>
 
     <script>
-      const menuBtn = document.getElementById("menuBtn");
-      const menuIcon = document.getElementById("menuIcon");
-      const menuList = document.getElementById("menuList");
-  
-      menuBtn.addEventListener("click", () => {
-          menuList.classList.toggle("hidden");
-          if (menuList.classList.contains("hidden")) {
-              // Si el menú está cerrado, muestra el icono de hamburguesa a la derecha
-              menuIcon.classList.remove("fa-times");
-              menuIcon.classList.add("fa-bars");
-          } else {
-              // Si el menú está abierto, muestra el icono de equis a la derecha
-              menuIcon.classList.remove("fa-bars");
-              menuIcon.classList.add("fa-times");
-          }
-      });
-  </script>
+        const menuBtn = document.getElementById("menuBtn");
+        const menuIcon = document.getElementById("menuIcon");
+        const menuList = document.getElementById("menuList");
+
+        menuBtn.addEventListener("click", () => {
+            menuList.classList.toggle("hidden");
+            if (menuList.classList.contains("hidden")) {
+                // Si el menú está cerrado, muestra el icono de hamburguesa a la derecha
+                menuIcon.classList.remove("fa-times");
+                menuIcon.classList.add("fa-bars");
+            } else {
+                // Si el menú está abierto, muestra el icono de equis a la derecha
+                menuIcon.classList.remove("fa-bars");
+                menuIcon.classList.add("fa-times");
+            }
+        });
+    </script>
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </body>
 
