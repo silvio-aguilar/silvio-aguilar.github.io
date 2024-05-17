@@ -33,7 +33,17 @@
     </main>
 
     <script>
-        function createPads(numPads) {
+        const context = new (window.AudioContext || window.webkitAudioContext)();
+        const sounds = {};
+
+        async function loadSound(url) {
+            const response = await fetch(url);
+            const arrayBuffer = await response.arrayBuffer();
+            const audioBuffer = await context.decodeAudioData(arrayBuffer);
+            return audioBuffer;
+        }
+
+        async function createPads(numPads) {
             const padContainer = document.querySelector('#padContainer > .grid');
             padContainer.innerHTML = ''; // Clear existing pads
 
@@ -66,16 +76,19 @@
 
                 padContainer.appendChild(padWrapper);
 
-                // Set predefined sound from the "sonidos" folder
+                // Load and store predefined sound
                 const soundUrl = `sonidos/sonido${i + 1}.mp3`;
-                localStorage.setItem(`sound_${pad.innerText}`, soundUrl);
+                const audioBuffer = await loadSound(soundUrl);
+                sounds[`sound_${pad.innerText}`] = audioBuffer;
             }
         }
 
         function addSound(pad) {
             const soundUrl = prompt('Introduce la URL del sonido:');
             if (soundUrl) {
-                localStorage.setItem(`sound_${pad.innerText}`, soundUrl);
+                loadSound(soundUrl).then(audioBuffer => {
+                    sounds[`sound_${pad.innerText}`] = audioBuffer;
+                });
             }
         }
 
@@ -97,10 +110,12 @@
         });
 
         function playSound(pad) {
-            const soundUrl = localStorage.getItem(`sound_${pad.innerText}`);
-            if (soundUrl) {
-                const audio = new Audio(soundUrl);
-                audio.play();
+            const audioBuffer = sounds[`sound_${pad.innerText}`];
+            if (audioBuffer) {
+                const source = context.createBufferSource();
+                source.buffer = audioBuffer;
+                source.connect(context.destination);
+                source.start(0);
             }
         }
     </script>
