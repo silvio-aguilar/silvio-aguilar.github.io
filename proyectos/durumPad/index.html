@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DurumPad</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <meta name="description" content="DurumPad - An efficient pad for your durum management.">
+    <meta name="keywords" content="DurumPad, management, tools, productivity, drumpad, production, sound">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body class="bg-gray-100 flex flex-col items-center min-h-screen">
+
+    <header class="bg-red-500 text-white text-center p-5 text-2xl font-bold w-full">
+        DurumPad
+    </header>
+
+    <main class="p-5 w-full max-w-2xl flex-grow flex flex-col items-center">
+        <section class="mb-5 w-full">
+            <label for="padOptions" class="block text-lg font-semibold mb-2 text-center">Selecciona el número de Pads:</label>
+            <div id="padOptions" class="flex flex-wrap justify-center space-x-2">
+                <button onclick="createPads(3)" class="bg-blue-500 text-white rounded-lg p-2 focus:outline-none hover:bg-blue-700 m-1">3 Pads</button>
+                <button onclick="createPads(6)" class="bg-blue-500 text-white rounded-lg p-2 focus:outline-none hover:bg-blue-700 m-1">6 Pads</button>
+                <button onclick="createPads(9)" class="bg-blue-500 text-white rounded-lg p-2 focus:outline-none hover:bg-blue-700 m-1">9 Pads</button>
+                <button onclick="createPads(12)" class="bg-blue-500 text-white rounded-lg p-2 focus:outline-none hover:bg-blue-700 m-1">12 Pads</button>
+            </div>
+        </section>
+        <section id="padContainer" class="border-2 border-gray-300 rounded-lg shadow-lg w-full p-5 bg-white flex-grow">
+            <div class="h-full w-full grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-center justify-center text-gray-500">
+                <p class="text-lg text-center col-span-full">No hay seleccionado ninguna configuración todavía.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function createPads(numPads) {
+            const padContainer = document.querySelector('#padContainer > .grid');
+            padContainer.innerHTML = ''; // Clear existing pads
+
+            for (let i = 0; i < numPads; i++) {
+                const padWrapper = document.createElement('div');
+                padWrapper.className = 'flex items-center';
+
+                const pad = document.createElement('div');
+                pad.className = 'bg-gray-200 p-5 sm:p-10 rounded-lg shadow-md flex items-center justify-center text-xl sm:text-2xl font-bold w-24 h-24 sm:w-32 sm:h-32';
+                pad.innerText = `Pad ${i + 1}`;
+                pad.onclick = () => playSound(pad);
+                padWrapper.appendChild(pad);
+
+                const buttonContainer = document.createElement('div');
+                buttonContainer.className = 'flex flex-col space-y-2 ml-2';
+
+                const soundButton = document.createElement('button');
+                soundButton.className = 'bg-green-500 text-white rounded-lg p-1 focus:outline-none hover:bg-green-700';
+                soundButton.innerHTML = '<i class="fas fa-music"></i>';
+                soundButton.onclick = () => addSound(pad);
+
+                const keyButton = document.createElement('button');
+                keyButton.className = 'bg-yellow-500 text-white rounded-lg p-1 focus:outline-none hover:bg-yellow-700';
+                keyButton.innerHTML = '<i class="fas fa-keyboard"></i>';
+                keyButton.onclick = () => setKey(pad);
+
+                buttonContainer.appendChild(soundButton);
+                buttonContainer.appendChild(keyButton);
+                padWrapper.appendChild(buttonContainer);
+
+                padContainer.appendChild(padWrapper);
+
+                // Set predefined sound from the "sonidos" folder
+                const soundUrl = `sonidos/sonido${i + 1}.mp3`;
+                localStorage.setItem(`sound_${pad.innerText}`, soundUrl);
+            }
+        }
+
+        function addSound(pad) {
+            const soundUrl = prompt('Introduce la URL del sonido:');
+            if (soundUrl) {
+                localStorage.setItem(`sound_${pad.innerText}`, soundUrl);
+            }
+        }
+
+        function setKey(pad) {
+            const key = prompt('Pulsa una tecla para asignar:');
+            if (key) {
+                localStorage.setItem(`key_${pad.innerText}`, key);
+            }
+        }
+
+        document.addEventListener('keydown', (event) => {
+            const pads = document.querySelectorAll('#padContainer > .grid > .flex > div:first-child');
+            pads.forEach((pad) => {
+                const assignedKey = localStorage.getItem(`key_${pad.innerText}`);
+                if (assignedKey && event.key === assignedKey) {
+                    playSound(pad);
+                }
+            });
+        });
+
+        function playSound(pad) {
+            const soundUrl = localStorage.getItem(`sound_${pad.innerText}`);
+            if (soundUrl) {
+                const audio = new Audio(soundUrl);
+                audio.play();
+            }
+        }
+    </script>
+</body>
+</html>
