@@ -15,7 +15,7 @@
         DurumPad
     </header>
 
-    <main class="p-5 w-full max-w-2xl flex-grow flex flex-col items-center">
+    <main class="p-4 w-full max-w-2xl flex-grow flex flex-col items-center">
         <section class="mb-5 w-full">
             <label for="padOptions" class="block text-lg font-semibold mb-2 text-center">Selecciona el número de Pads:</label>
             <div id="padOptions" class="flex flex-wrap justify-center space-x-2">
@@ -25,48 +25,38 @@
                 <button ontouchstart="" onclick="createPads(12)" class="bg-blue-500 text-white rounded-lg p-2 focus:outline-none hover:bg-blue-800 m-1">12 Pads</button>
             </div>
         </section>
-        <section id="padContainer" class="border-2 border-gray-300 rounded-lg shadow-lg w-full p-5 bg-white flex-grow">
-            <div class="h-full w-full grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-4 items-center justify-center text-gray-500">
+        <section id="padContainer" class="border-2 border-gray-300 rounded-lg shadow-lg w-full p-4 bg-white flex-grow">
+            <div class="h-full w-full grid grid-cols-3 gap-4 items-center justify-center text-gray-500">
                 <p class="text-lg text-center col-span-full">No hay seleccionado ninguna configuración todavía.</p>
             </div>
         </section>
     </main>
 
     <script>
-        const context = new (window.AudioContext || window.webkitAudioContext)();
-        const sounds = {};
-
-        async function loadSound(url) {
-            const response = await fetch(url);
-            const arrayBuffer = await response.arrayBuffer();
-            const audioBuffer = await context.decodeAudioData(arrayBuffer);
-            return audioBuffer;
-        }
-
-        async function createPads(numPads) {
+        function createPads(numPads) {
             const padContainer = document.querySelector('#padContainer > .grid');
             padContainer.innerHTML = ''; // Clear existing pads
 
             for (let i = 0; i < numPads; i++) {
                 const padWrapper = document.createElement('div');
-                padWrapper.className = 'flex items-center';
+                padWrapper.className = 'flex flex-col items-center';
 
                 const pad = document.createElement('div');
-                pad.className = 'bg-gray-200 p-5 sm:p-10 rounded-lg shadow-md flex items-center justify-center text-xl sm:text-2xl font-bold w-20 h-20 sm:w-32 sm:h-32';
+                pad.className = 'bg-gray-200 p-4 sm:p-6 lg:p-8 rounded-lg shadow-md flex items-center justify-center text-sm sm:text-lg font-bold w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24';
                 pad.innerText = `Pad ${i + 1}`;
                 pad.onclick = () => playSound(pad);
                 padWrapper.appendChild(pad);
 
                 const buttonContainer = document.createElement('div');
-                buttonContainer.className = 'flex flex-col space-y-2 ml-2';
+                buttonContainer.className = 'flex space-x-2 mt-2';
 
                 const soundButton = document.createElement('button');
-                soundButton.className = 'bg-green-500 text-white rounded-lg p-1 focus:outline-none hover:bg-green-700';
+                soundButton.className = 'bg-green-500 text-white rounded-lg p-2 focus:outline-none hover:bg-green-700';
                 soundButton.innerHTML = '<i class="fas fa-music"></i>';
                 soundButton.onclick = () => addSound(pad);
 
                 const keyButton = document.createElement('button');
-                keyButton.className = 'bg-yellow-500 text-white rounded-lg p-1 focus:outline-none hover:bg-yellow-700';
+                keyButton.className = 'bg-yellow-500 text-white rounded-lg p-2 focus:outline-none hover:bg-yellow-700';
                 keyButton.innerHTML = '<i class="fas fa-keyboard"></i>';
                 keyButton.onclick = () => setKey(pad);
 
@@ -76,19 +66,16 @@
 
                 padContainer.appendChild(padWrapper);
 
-                // Load and store predefined sound
+                // Set predefined sound from the "sonidos" folder
                 const soundUrl = `sonidos/sonido${i + 1}.mp3`;
-                const audioBuffer = await loadSound(soundUrl);
-                sounds[`sound_${pad.innerText}`] = audioBuffer;
+                localStorage.setItem(`sound_${pad.innerText}`, soundUrl);
             }
         }
 
         function addSound(pad) {
             const soundUrl = prompt('Introduce la URL del sonido:');
             if (soundUrl) {
-                loadSound(soundUrl).then(audioBuffer => {
-                    sounds[`sound_${pad.innerText}`] = audioBuffer;
-                });
+                localStorage.setItem(`sound_${pad.innerText}`, soundUrl);
             }
         }
 
@@ -110,12 +97,10 @@
         });
 
         function playSound(pad) {
-            const audioBuffer = sounds[`sound_${pad.innerText}`];
-            if (audioBuffer) {
-                const source = context.createBufferSource();
-                source.buffer = audioBuffer;
-                source.connect(context.destination);
-                source.start(0);
+            const soundUrl = localStorage.getItem(`sound_${pad.innerText}`);
+            if (soundUrl) {
+                const audio = new Audio(soundUrl);
+                audio.play();
             }
         }
     </script>
