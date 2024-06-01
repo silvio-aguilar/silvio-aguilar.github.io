@@ -12,9 +12,9 @@
 </head>
 <body class="bg-gray-100 p-6">
   <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
-    <h2 class="text-lg font-bold mb-4">Calculadora de Probabilidades de Ser Golpeado por un Meteorito</h2>
+    <h2 class="text-lg font-bold mb-4 text-center">Probabilidades de Ser Golpeado por un Meteorito</h2>
     <p class="text-gray-700">Haz clic en el mapa para seleccionar tu ubicación:</p>
-    <div id="map" class="mt-4"></div>
+    <div id="map" class="mt-4 rounded"></div>
     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4" onclick="calculateMeteorProbability()">Calcular Probabilidad</button>
     <div id="result" class="mt-4 text-gray-700"></div>
   </div>
@@ -28,12 +28,21 @@
     }).addTo(map);
 
     let selectedLocation = null;
+    let marker = null;
 
     map.on('click', (e) => {
       const latitude = e.latlng.lat.toFixed(4);
       const longitude = e.latlng.lng.toFixed(4);
 
       selectedLocation = { latitude, longitude };
+
+      // Eliminar el marcador anterior si existe
+      if (marker) {
+        map.removeLayer(marker);
+      }
+
+      // Añadir un nuevo marcador en la ubicación seleccionada
+      marker = L.marker([latitude, longitude]).addTo(map);
 
       document.getElementById('result').textContent = `Ubicación seleccionada: Latitud ${latitude}, Longitud ${longitude}`;
     });
