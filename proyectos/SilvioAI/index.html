@@ -58,35 +58,56 @@
             chatBox.scrollTop = chatBox.scrollHeight; // Desplaza automáticamente hacia abajo
         }
 
-        function generateResponse(input, context) {
-            // Analizar el sentimiento del input del usuario
+        function generateResponse(input) {
+            const responses = {
+                positivo: [
+                    "Me alegra saberlo. ¿Qué más te hace sentir así?",
+                    "¡Eso es genial! Cuéntame más.",
+                    "¡Qué bien! ¿Cómo lograste sentirte así?",
+                    "Me encanta escuchar cosas positivas. ¿Qué planes tienes?"
+                ],
+                negativo: [
+                    "Lamento escuchar eso. ¿Qué crees que te está afectando?",
+                    "Lo siento mucho. ¿Qué podría hacerte sentir mejor?",
+                    "Parece que estás pasando por un mal momento. ¿Quieres hablar más sobre ello?",
+                    "Entiendo. A veces es difícil. ¿Qué te ayudaría en este momento?"
+                ],
+                neutral: [
+                    "Entiendo. ¿Puedes decirme más al respecto?",
+                    "Eso suena interesante. ¿Podrías darme más detalles?",
+                    "¿Y cómo te hace sentir eso?",
+                    "Cuéntame más sobre eso. Estoy aquí para escucharte."
+                ]
+            };
+
+            const questions = [
+                "¿Qué más te gustaría compartir?",
+                "¿Por qué crees que te sientes así?",
+                "¿Hay algo que te gustaría cambiar?",
+                "¿Qué podrías hacer para mejorar tu situación?",
+                "¿Cómo te ves en el futuro?",
+                "¿Qué te motiva a seguir adelante?",
+                "¿Cuál es tu mayor desafío en este momento?",
+                "¿Qué te hace sentir realizado?"
+            ];
+
             const sentiment = analyzeSentiment(input);
-        
-            // Responder en consecuencia
-            if (sentiment === 'positivo') {
-                return "¡Me alegra escuchar eso!";
-            } else if (sentiment === 'negativo') {
-                return "Lamento escuchar eso. ¿Hay algo en lo que pueda ayudarte?";
-            } else {
-                // Respuesta genérica si no se puede determinar el sentimiento
-                return "¿Podrías repetir eso de otra manera?";
-            }
+            const responseList = responses[sentiment];
+            const response = responseList[Math.floor(Math.random() * responseList.length)];
+            const question = questions[Math.floor(Math.random() * questions.length)];
+
+            return `${response} ${question}`;
         }
-        
-        // Función de ejemplo para analizar el sentimiento del texto
+
         function analyzeSentiment(text) {
-            // Aquí podrías utilizar un modelo de análisis de sentimientos como Vader, TextBlob, etc.
-            // Por simplicidad, este ejemplo devuelve 'positivo' si contiene palabras como 'feliz' o 'bien',
-            // 'negativo' si contiene palabras como 'triste' o 'mal', y 'neutral' en otros casos.
-            if (text.includes('feliz') || text.includes('bien')) {
+            if (text.includes('feliz') || text.includes('bien') || text.includes('genial')) {
                 return 'positivo';
-            } else if (text.includes('triste') || text.includes('mal')) {
+            } else if (text.includes('triste') || text.includes('mal') || text.includes('horrible')) {
                 return 'negativo';
             } else {
                 return 'neutral';
             }
         }
-        
 
         function processUserInput(input) {
             const response = generateResponse(input);
