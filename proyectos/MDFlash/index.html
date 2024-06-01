@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RDFlash - Generador de README</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.14.0/devicon.min.css">
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+    <h1 class="text-3xl font-bold mb-4 text-center">RDFlash - Generador de README</h1>
+    <form id="readme-form" class="space-y-4">
+      <div>
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="directory">
+          Subir Carpeta
+        </label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="directory" type="file" webkitdirectory directory multiple>
+      </div>
+      <div class="flex items-center justify-between">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="generateReadme()">
+          Generar README
+        </button>
+        <button id="download-button" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="downloadReadme()" disabled>
+          Descargar README
+        </button>
+      </div>
+    </form>
+    <div id="loading" class="flex justify-center items-center mt-6 hidden">
+      <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12"></div>
+      <span class="ml-3 text-gray-700">Cargando archivos...</span>
+    </div>
+    <pre id="output" class="mt-6 p-4 bg-gray-200 rounded-lg overflow-x-auto"></pre>
+  </div>
+  <style>
+    .loader {
+      border-top-color: #3498db;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+  <script src="script.js"></script>
+</body>
+</html>

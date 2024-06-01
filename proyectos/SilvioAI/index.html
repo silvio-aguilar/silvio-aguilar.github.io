@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente de Chat</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Estilos personalizados */
+        .chat-message {
+            max-width: 70%;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="w-full max-w-md p-4 bg-white rounded-lg shadow-lg">
+        <div id="chat-box" class="h-96 overflow-y-auto p-2">
+            <!-- Aquí se mostrarán los mensajes del chat -->
+        </div>
+        <button id="start-btn" class="bg-blue-500 text-white p-2 rounded-lg w-full mt-4">Iniciar Escucha</button>
+        <div id="loading" class="hidden mt-4 flex items-center justify-center">
+            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+        </div>
+    </div>
+
+    <script>
+        const recognition = new window.webkitSpeechRecognition(); // Para navegadores que admiten WebKit
+
+        recognition.lang = 'es-ES'; // Establece el idioma del reconocimiento de voz
+
+        recognition.onresult = (event) => {
+            const transcript = event.results[0][0].transcript;
+            processUserInput(transcript);
+        };
+
+        function startListening() {
+            document.getElementById('loading').classList.remove('hidden');
+            recognition.start();
+        }
+
+        function stopListening() {
+            recognition.stop();
+            document.getElementById('loading').classList.add('hidden');
+        }
+
+        function speak(text) {
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'es-ES'; // Establece el idioma de la síntesis de voz
+            speechSynthesis.speak(utterance);
+        }
+
+        function addMessage(sender, message) {
+            const chatBox = document.getElementById('chat-box');
+            const messageElement = document.createElement('div');
+            messageElement.className = sender === 'assistant' ? 'text-gray-600 mb-2 chat-message' : 'text-right text-blue-600 mb-2 chat-message';
+            messageElement.textContent = message;
+            chatBox.appendChild(messageElement);
+            chatBox.scrollTop = chatBox.scrollHeight; // Desplaza automáticamente hacia abajo
+        }
+
+        function generateResponse(input, context) {
+            // Analizar el sentimiento del input del usuario
+            const sentiment = analyzeSentiment(input);
+        
+            // Responder en consecuencia
+            if (sentiment === 'positivo') {
+                return "¡Me alegra escuchar eso!";
+            } else if (sentiment === 'negativo') {
+                return "Lamento escuchar eso. ¿Hay algo en lo que pueda ayudarte?";
+            } else {
+                // Respuesta genérica si no se puede determinar el sentimiento
+                return "¿Podrías repetir eso de otra manera?";
+            }
+        }
+        
+        // Función de ejemplo para analizar el sentimiento del texto
+        function analyzeSentiment(text) {
+            // Aquí podrías utilizar un modelo de análisis de sentimientos como Vader, TextBlob, etc.
+            // Por simplicidad, este ejemplo devuelve 'positivo' si contiene palabras como 'feliz' o 'bien',
+            // 'negativo' si contiene palabras como 'triste' o 'mal', y 'neutral' en otros casos.
+            if (text.includes('feliz') || text.includes('bien')) {
+                return 'positivo';
+            } else if (text.includes('triste') || text.includes('mal')) {
+                return 'negativo';
+            } else {
+                return 'neutral';
+            }
+        }
+        
+
+        function processUserInput(input) {
+            const response = generateResponse(input);
+            addMessage('user', input);
+            setTimeout(() => {
+                addMessage('assistant', response);
+                speak(response);
+                document.getElementById('loading').classList.add('hidden');
+            }, 2000); // Simula un tiempo de respuesta de 2 segundos
+        }
+
+        document.getElementById('start-btn').addEventListener('click', startListening);
+    </script>
+</body>
+</html>

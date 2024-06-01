@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Frases Filosóficas Aleatorias</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
+    <h2 class="text-lg font-bold mb-4">Generador de Frases Filosóficas Aleatorias</h2>
+    <p class="text-gray-700" id="quote">La vida es como un lápiz que siempre se queda sin punta en el momento menos oportuno.</p>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4" onclick="generatePhilosophicalQuote()">Generar Otra Frase</button>
+  </div>
+
+  <script>
+    const beginnings = [
+      "La vida es como",
+      "El amor es como",
+      "La mente humana es como",
+      "La naturaleza es como",
+      "La felicidad es como",
+      "La sabiduría es como",
+      "El destino es como",
+      "El tiempo es como",
+      "El universo es como",
+      "La amistad es como",
+      "La procrastinación es como",
+      "La dieta es como",
+      "La política es como",
+      "La tecnología es como",
+      "El dinero es como",
+      "El caos es como",
+      "El silencio es como",
+      "La creatividad es como",
+      "La justicia es como",
+      "El miedo es como",
+      "La felicidad es como",
+      "La soledad es como",
+      "El conocimiento es como",
+      "El éxito es como",
+      "El fracaso es como",
+      "La tristeza es como",
+      "La alegría es como",
+      "El poder es como",
+      "La esperanza es como",
+      "La fe es como",
+      "El sueño es como"
+    ];
+
+    const middles = [
+      "un lápiz que siempre se queda sin punta",
+      "una montaña rusa emocional",
+      "una película de bajo presupuesto",
+      "un plato de sopa que nunca se enfría",
+      "una melodía que nunca termina",
+      "un agujero negro de pensamientos",
+      "un juego de ajedrez en el que nunca se gana",
+      "un pájaro que canta fuera de tono",
+      "una película de terror sin efectos especiales",
+      "un puzzle con una pieza perdida",
+      "un libro de chistes sin gracia",
+      "un programa de televisión en bucle",
+      "un tren que siempre llega tarde",
+      "una fiesta sin invitados",
+      "un teléfono sin batería",
+      "una escalera que nunca termina",
+      "una montaña que siempre está en la distancia",
+      "un río que nunca se detiene",
+      "un laberinto sin salida",
+      "una nube sin lluvia",
+      "un árbol sin raíces",
+      "una estrella que nunca brilla",
+      "un cielo sin estrellas",
+      "un océano sin fin",
+      "un camino sin destino",
+      "un horizonte lejano",
+      "una sombra en la oscuridad",
+      "una luz en la tiniebla",
+      "un eco en el vacío",
+      "un susurro en el viento",
+      "una voz en el silencio"
+    ];
+
+    const endings = [
+      "en el momento menos oportuno.",
+      "sin manual de instrucciones.",
+      "pero nadie tiene el mando a distancia.",
+      "pero nadie sabe la contraseña.",
+      "y todo el mundo quiere saltar.",
+      "y nadie sabe cómo termina.",
+      "pero nadie sabe cómo empezó.",
+      "y siempre termina en un desastre.",
+      "y nunca hay suficiente.",
+      "y nadie lo quiere.",
+      "y nunca hay final feliz.",
+      "y nadie sabe quién lo compró.",
+      "y todo el mundo se aburre.",
+      "y nadie sabe por qué.",
+      "y nadie lo entiende.",
+      "pero siempre hay una luz al final del túnel.",
+      "pero nunca se sabe lo que se encuentra en la próxima curva.",
+      "pero siempre hay una oportunidad de redención.",
+      "pero cada paso es un paso más cerca del destino.",
+      "pero el viaje es la verdadera recompensa.",
+      "pero el verdadero valor está en el viaje, no en el destino.",
+      "pero el camino menos transitado siempre lleva a las mejores vistas.",
+      "pero el destino siempre tiene un plan para nosotros.",
+      "pero el destino nos sorprende cuando menos lo esperamos.",
+      "pero el destino siempre encuentra una manera de guiarnos.",
+      "pero la vida siempre encuentra una manera de sorprendernos.",
+      "pero el universo siempre tiene un plan para nosotros.",
+      "pero el universo siempre nos guía en la dirección correcta.",
+      "pero el universo siempre nos lleva donde necesitamos ir.",
+      "pero el universo siempre nos muestra el camino."
+    ];
+
+    function generatePhilosophicalQuote() {
+      const randomBeginning = beginnings[Math.floor(Math.random() * beginnings.length)];
+      const randomMiddle = middles[Math.floor(Math.random() * middles.length)];
+      const randomEnding = endings[Math.floor(Math.random() * endings.length)];
+      document.getElementById('quote').textContent = `${randomBeginning} ${randomMiddle}, ${randomEnding}`;
+    }
+  </script>
+</body>
+</html>

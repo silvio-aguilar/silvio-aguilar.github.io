@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detector de Energía de Plantas</title>
+    <!-- TailwindCSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-200 p-4">
+    <div class="max-w-lg mx-auto bg-white p-8 rounded shadow-lg">
+        <h1 class="text-3xl font-semibold mb-4">Detector de Energía de Plantas</h1>
+        <p class="mb-4">Coloca tus manos cerca de una planta para detectar su energía:</p>
+        <div id="energyLevel" class="text-lg font-semibold mb-4">Nivel de energía: <span id="levelValue">-</span></div>
+        <button id="detectButton" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">Detectar Energía</button>
+    </div>
+
+    <script>
+        // Código JavaScript
+        document.getElementById('detectButton').addEventListener('click', function() {
+            const energyLevel = Math.floor(Math.random() * 101); // Genera un número aleatorio entre 0 y 100
+            document.getElementById('levelValue').textContent = energyLevel;
+        });
+    </script>
+</body>
+</html>
