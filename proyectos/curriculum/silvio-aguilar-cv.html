@@ -1,120 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Curriculum Silvio Aguilar</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body class="bg-gray-100 dark:bg-gray-800">
-    <nav class="bg-white border-gray-200 dark:bg-gray-900 shadow fixed w-full">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="../../assets/images/fotoPerfilSilvio.jpg" class="h-8" alt="Silvio Aguilar Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Silvio Aguilar</span>
-            </a>
-            <div class="flex md:order-2">
-                <button id="toggle-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-search" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                    </svg>
-                </button>
-            </div>
-            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
-                <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                    <li>
-                        <a href="../index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Proyectos</a>
-                    </li>
-                    <li>
-                        <a href="#contacto" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contacto</a>
-                    </li>
-                    <li>
-                        <a href="#colegas" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Colegas</a>
-                    </li>
-                    <li>
-                        <a href="#silvio-aguilar-cv" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Curriculum</a>
-                    </li>
-                </ul>
-            </div>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body class="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200">
+    <nav
+      class="bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 shadow fixed w-full"
+    >
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img
+            src="../../assets/images/fotoPerfilSilvio.jpg"
+            class="h-8 rounded-full"
+            alt="Silvio Aguilar Logo"
+          />
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+            >Silvio Aguilar</span
+          >
+        </a>
+        <div class="flex md:order-2">
+          <button
+            id="toggle-menu"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-search"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
         </div>
+        <div
+          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          id="navbar-search"
+        >
+          <ul
+            class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li>
+              <a
+                href="../index.html"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Proyectos</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contacto"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Contacto</a
+              >
+            </li>
+            <li>
+              <a
+                href="#colegas"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Colegas</a
+              >
+            </li>
+            <li>
+              <a
+                href="#silvio-aguilar-cv"
+                class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                aria-current="page"
+                >Curriculum</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
     <!-- CUERPO DEL CURRICULUM -->
     <section class="pt-24 p-5">
-        <p class="text-3xl font-bold text-center">Desarrollador FullStack Multiplataforma</p>
-        <p class="text-center">
-            Pasito a pasito y con código limpio...
-        </p>
+      <p class="text-3xl font-bold text-center">
+        Desarrollador FullStack Multiplataforma
+      </p>
+      <p class="text-center">Pasito a pasito y con código limpio...</p>
     </section>
 
     <section class="mx-auto max-w-2xl xl:max-w-4xl p-5">
-        <div class="bg-white border rounded-xl shadow-xl p-5 m-5">
-            <p class="text-2xl font-bold">Objetivo principal</p>
-            <p>
-                Mi deseo es ser un profesional experimentado en el mundo de la programación,
-                el desarrollo web y las aplicaciones móviles, ya sea de diseños estáticos o 
-                añadiendo interactividad y tecnologías 3D, me encanta descubrir nuevas tecnologías cada día y aplicarlas en mis proyectos.
-            </p>
-        </div>
+      <div
+        class="bg-white dark:bg-gray-900 border rounded-xl shadow-xl p-5 m-5"
+      >
+        <p class="text-2xl font-bold">Objetivo principal</p>
+        <p>
+          Mi deseo es ser un profesional experimentado en el mundo de la
+          programación, el desarrollo web y las aplicaciones móviles, ya sea de
+          diseños estáticos o añadiendo interactividad y tecnologías 3D, me
+          encanta descubrir nuevas tecnologías cada día y aplicarlas en mis
+          proyectos.
+        </p>
+      </div>
 
-        <div class="bg-white border rounded-xl shadow-xl p-5 m-5">
-            <p class="text-2xl font-bold">Mis lenguajes favoritos</p>
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-5">
-                <div class="bg-gray-100 border rounded-xl flex flex-col items-center justify-center p-4 font-bold shadow-lg hover:bg-white">
-                    <img class="w-10 h-10 mb-2" src="./imagenes/html-5.png" alt="HTML">
-                    <span>HTML</span>
-                </div>
-                <div class="bg-gray-100 border rounded-xl flex flex-col items-center justify-center p-4 font-bold shadow-lg hover:bg-white">
-                    <img class="w-10 h-10 mb-2" src="./imagenes/css-3.png" alt="CSS">
-                    <span>CSS</span>
-                </div>
-                <div class="bg-gray-100 border rounded-xl flex flex-col items-center justify-center p-4 font-bold shadow-lg hover:bg-white">
-                    <img class="w-10 h-10 mb-2" src="./imagenes/js.png" alt="JavaScript">
-                    <span>JavaScript</span>
-                </div>
-                <div class="bg-gray-100 border rounded-xl flex flex-col items-center justify-center p-4 font-bold shadow-lg hover:bg-white">
-                    <img class="w-10 h-10 mb-2" src="./imagenes/react.png" alt="React">
-                    <span>React</span>
-                </div>
-                <div class="bg-gray-100 border rounded-xl flex flex-col items-center justify-center p-4 font-bold shadow-lg hover:bg-white">
-                    <img class="w-10 h-10 mb-2" src="./imagenes/react-native.png" alt="React Native">
-                    <span>React Native</span>
-                </div>
-                <div class="bg-gray-100 border rounded-xl flex flex-col items-center justify-center p-4 font-bold shadow-lg hover:bg-white">
-                    <img class="w-10 h-10 mb-2" src="./imagenes/expo.png" alt="Expo">
-                    <span>Expo</span>
-                </div>
-                <div class="bg-gray-100 border rounded-xl flex flex-col items-center justify-center p-4 font-bold shadow-lg hover:bg-white">
-                    <img class="w-10 h-10 mb-2" src="./imagenes/node.png" alt="Node.js">
-                    <span>Node.js</span>
-                </div>
-                <div class="bg-gray-100 border rounded-xl flex flex-col items-center justify-center p-4 font-bold shadow-lg hover:bg-white">
-                    <img class="w-10 h-10 mb-2" src="./imagenes/laravel.png" alt="Laravel">
-                    <span>Laravel</span>
-                </div>
-                <div class="bg-gray-100 border rounded-xl flex flex-col items-center justify-center p-4 font-bold shadow-lg hover:bg-white">
-                    <img class="w-10 h-10 mb-2" src="./imagenes/sql.png" alt="SQL">
-                    <span>SQL</span>
-                </div>
-                <div class="bg-gray-100 border rounded-xl flex flex-col items-center justify-center p-4 font-bold shadow-lg hover:bg-white">
-                    <img class="w-10 h-10 mb-2" src="./imagenes/npm.png" alt="NPM">
-                    <span>NPM</span>
-                </div>
-                <div class="bg-gray-100 border rounded-xl flex flex-col items-center justify-center p-4 font-bold shadow-lg hover:bg-white">
-                    <img class="w-10 h-10 mb-2" src="./imagenes/php.png" alt="PHP">
-                    <span>PHP</span>
-                </div>
-                <div class="bg-gray-100 border rounded-xl flex flex-col items-center justify-center p-4 font-bold shadow-lg hover:bg-white">
-                    <img class="w-10 h-10 mb-2" src="./imagenes/docker.png" alt="Docker">
-                    <span>Docker</span>
-                </div>
-           
-            </div>
+      <div
+        class="bg-white dark:bg-gray-900 border rounded-xl shadow-xl p-5 m-5"
+      >
+        <p class="text-2xl font-bold">Mis lenguajes favoritos</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-5">
+          <div
+            class="bg-gray-100 dark:bg-gray-800 border rounded-xl flex flex-col items-center justify-center p-4 font-bold shadow-lg hover:bg-white dark:hover:bg-gray-700"
+          >
+            <img
+              class="w-10 h-10 mb-2"
+              src="./imagenes/html-5.png"
+              alt="HTML"
+            />
+            <span>HTML</span>
+          </div>
+          <div
+            class="bg-gray-100 dark:bg-gray-800 border rounded-xl flex flex-col items-center justify-center p-4 font-bold shadow-lg hover:bg-white dark:hover:bg-gray-700"
+          >
+            <img class="w-10 h-10 mb-2" src="./imagenes/css-3.png" alt="CSS" />
+            <span>CSS</span>
+          </div>
+          <div
+            class="bg-gray-100 dark:bg-gray-800 border rounded-xl flex flex-col items-center justify-center p-4 font-bold shadow-lg hover:bg-white dark:hover:bg-gray-700"
+          >
+            <img
+              class="w-10 h-10 mb-2"
+              src="./imagenes/js.png"
+              alt="JavaScript"
+            />
+            <span>JavaScript</span>
+          </div>
+          <div
+            class="bg-gray-100 dark:bg-gray-800 border rounded-xl flex flex-col items-center justify-center p-4 font-bold shadow-lg hover:bg-white dark:hover:bg-gray-700"
+          >
+            <img
+              class="w-10 h-10 mb-2"
+              src="./imagenes/react.png"
+              alt="React"
+            />
+            <span>React</span>
+          </div>
+          <div
+            class="bg-gray-100 dark:bg-gray-800 border rounded-xl flex flex-col items-center justify-center p-4 font-bold shadow-lg hover:bg-white dark:hover:bg-gray-700"
+          >
+            <img
+              class="w-10 h-10 mb-2"
+              src="./imagenes/react-native.png"
+              alt="React Native"
+            />
+            <span>React Native</span>
+          </div>
+          <div
+            class="bg-gray-100 dark:bg-gray-800 border rounded-xl flex flex-col items-center justify-center p-4 font-bold shadow-lg hover:bg-white dark:hover:bg-gray-700"
+          >
+            <img class="w-10 h-10 mb-2" src="./imagenes/expo.png" alt="Expo" />
+            <span>Expo</span>
+          </div>
+          <div
+            class="bg-gray-100 dark:bg-gray-800 border rounded-xl flex flex-col items-center justify-center p-4 font-bold shadow-lg hover:bg-white dark:hover:bg-gray-700"
+          >
+            <img
+              class="w-10 h-10 mb-2"
+              src="./imagenes/node.png"
+              alt="Node.js"
+            />
+            <span>Node.js</span>
+          </div>
+          <div
+            class="bg-gray-100 dark:bg-gray-800 border rounded-xl flex flex-col items-center justify-center p-4 font-bold shadow-lg hover:bg-white dark:hover:bg-gray-700"
+          >
+            <img
+              class="w-10 h-10 mb-2"
+              src="./imagenes/laravel.png"
+              alt="Laravel"
+            />
+            <span>Laravel</span>
+          </div>
+          <div
+            class="bg-gray-100 dark:bg-gray-800 border rounded-xl flex flex-col items-center justify-center p-4 font-bold shadow-lg hover:bg-white dark:hover:bg-gray-700"
+          >
+            <img class="w-10 h-10 mb-2" src="./imagenes/sql.png" alt="SQL" />
+            <span>SQL</span>
+          </div>
+          <div
+            class="bg-gray-100 dark:bg-gray-800 border rounded-xl flex flex-col items-center justify-center p-4 font-bold shadow-lg hover:bg-white dark:hover:bg-gray-700"
+          >
+            <img class="w-10 h-10 mb-2" src="./imagenes/npm.png" alt="NPM" />
+            <span>NPM</span>
+          </div>
+          <div
+            class="bg-gray-100 dark:bg-gray-800 border rounded-xl flex flex-col items-center justify-center p-4 font-bold shadow-lg hover:bg-white dark:hover:bg-gray-700"
+          >
+            <img class="w-10 h-10 mb-2" src="./imagenes/php.png" alt="PHP" />
+            <span>PHP</span>
+          </div>
+          <div
+            class="bg-gray-100 dark:bg-gray-800 border rounded-xl flex flex-col items-center justify-center p-4 font-bold shadow-lg hover:bg-white dark:hover:bg-gray-700"
+          >
+            <img
+              class="w-10 h-10 mb-2"
+              src="./imagenes/docker.png"
+              alt="Docker"
+            />
+            <span>Docker</span>
+          </div>
         </div>
+      </div>
     </section>
 
     <script src="../../script.js"></script>
-</body>
+  </body>
 </html>
