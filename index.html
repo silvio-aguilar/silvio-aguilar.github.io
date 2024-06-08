@@ -11,6 +11,50 @@
     <style>
       @import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/tailwind.min.css');
     </style>
+
+    <style>
+      @keyframes animate-border {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+  
+      .rainbow-border {
+        position: relative;
+        display: inline-block;
+        padding: 10px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+        background-color: #222;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+  
+      .rainbow-border::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+        z-index: -1;
+        filter: blur(5px);
+        transition: opacity 0.5s;
+        opacity: 0;
+        border-radius: 10px;
+        animation: animate-border 3s linear infinite;
+      }
+  
+      .rainbow-border:hover::before {
+        opacity: 1;
+      }
+    </style>
   </head>
   <body>
     <nav class="bg-white border-gray-200 dark:bg-gray-900 shadow fixed w-full z-50">
@@ -107,8 +151,7 @@
       <!-- Contenido de la sección proyectos -->
     </section>
     <!-- Otras secciones de la página -->
-  </body>
-</html>
+  
 
    
     <section class="p-5 max-w-1.5 ">
@@ -117,6 +160,7 @@
         ¡Hola! Soy Silvio Aguilar, desarrollador de software. Me apasiona el mundo del Frontend, aunque tengo un perfil FullStack. ¡Aquí puedes ver
         todos mis proyectos y mucho más!
       </p>
+      <p class="border rounded-2xl p-2 mt-2 text-center bg-purple-400 text-white font-bold">Invitame a un café :D</p>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 mt-5">
         <div class="relative inline-block">
           <a href="#contacto" class="block relative">
@@ -462,9 +506,8 @@
             <h3 class="text-lg font-semibold mb-4">Redes Sociales</h3>
             <ul>
               <li><a href="#" class="hover:text-gray-400">Facebook</a></li>
-              <li><a href="#" class="hover:text-gray-400">Twitter</a></li>
               <li><a href="#" class="hover:text-gray-400">Instagram</a></li>
-              <li><a href="#" class="hover:text-gray-400">LinkedIn</a></li>
+              <li><a href="https://www.linkedin.com/in/silvio-aguilar/" class="hover:text-gray-400">LinkedIn</a></li>
             </ul>
           </div>
 
