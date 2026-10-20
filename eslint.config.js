@@ -19,4 +19,9 @@ export default defineConfig([
       globals: globals.browser,
     },
   },
+  {
+    files: ['scripts/**/*.{ts,tsx}'],
+    rules: { 'react-refresh/only-export-components': 'off' },
+    languageOptions: { globals: globals.node },
+  },
 ])

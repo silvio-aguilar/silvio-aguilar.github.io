@@ -27,3 +27,7 @@ dist-ssr
 legacy-source/
 MASTER_PROMPT*.md
 *.private.md
+
+# Generated at build time
+src/content/generated/
+dist-ssr/

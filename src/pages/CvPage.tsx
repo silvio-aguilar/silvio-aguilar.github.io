@@ -62,7 +62,8 @@ export default function CvPage() {
               <li key={i.id} className="grid gap-1 sm:grid-cols-[9rem_1fr]">
                 <span className="font-mono text-sm text-muted">{period(i.start, i.end, i.current)}</span>
                 <span>
-                  <strong>{i.text?.title}</strong> — {i.org}
+                  <strong>{i.text?.title}</strong>
+                  {i.org !== i.text?.title && ` — ${i.org}`}
                   <Todo note={i.todo} />
                   {i.text?.detail && <span className="block text-sm text-muted">{i.text.detail}</span>}
                 </span>
@@ -77,7 +78,8 @@ export default function CvPage() {
               <li key={i.id} className="grid gap-1 sm:grid-cols-[9rem_1fr]">
                 <span className="font-mono text-sm text-muted">{period(i.start, i.end, i.current)}</span>
                 <span>
-                  <strong>{i.text?.title}</strong> — {i.org}
+                  <strong>{i.text?.title}</strong>
+                  {i.org !== i.text?.title && ` — ${i.org}`}
                   <Todo note={i.todo} />
                   {i.text?.detail && <span className="block text-sm text-muted">{i.text.detail}</span>}
                 </span>

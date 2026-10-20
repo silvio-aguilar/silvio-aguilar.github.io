@@ -41,7 +41,7 @@ export function Timeline() {
                 {text?.title}
                 <Todo note={item.todo} />
               </h3>
-              <p className="text-sm text-muted">{item.org}</p>
+              {item.org !== text?.title && <p className="text-sm text-muted">{item.org}</p>}
               {text?.detail && <p className="mt-1 max-w-2xl text-sm">{text.detail}</p>}
             </li>
           )

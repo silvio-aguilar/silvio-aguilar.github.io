@@ -17,5 +17,8 @@ const app = (
 )
 
 const root = document.getElementById('root')!
-if (root.firstElementChild) hydrateRoot(root, app)
+// Hydrate only when the prerendered HTML belongs to this URL (404.html and the root do not)
+const route = document.documentElement.dataset.route
+const path = location.pathname.endsWith('/') ? location.pathname : `${location.pathname}/`
+if (root.firstElementChild && route === path) hydrateRoot(root, app)
 else createRoot(root).render(app)

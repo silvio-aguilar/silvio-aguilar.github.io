@@ -1,6 +1,7 @@
 import featuredJson from './featured.json'
 import reposJson from './generated/repos.json'
 import timelineJson from './timeline.json'
+import { hiddenRepos } from './repos.config'
 import de from './locales/de'
 import en from './locales/en'
 import es from './locales/es'
@@ -42,7 +43,8 @@ export function knownFor(profile: ProfileId): FeaturedProject[] {
 /** Public repos not already shown as featured projects. */
 export function otherRepos(): GithubRepo[] {
   const taken = new Set(featured.map((p) => findRepo(p)?.name).filter(Boolean))
-  return repos.filter((r) => !taken.has(r.name) && r.name !== 'silvio-aguilar.github.io')
+  const hidden = new Set(hiddenRepos.map((n) => n.toLowerCase()))
+  return repos.filter((r) => !taken.has(r.name) && !hidden.has(r.name.toLowerCase()))
 }
 
 /** Sort key: newest first, undated entries last. */
