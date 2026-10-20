@@ -1,0 +1,31 @@
+{
+  "seo": {
+    "title": "Silvio Aguilar (@kurzerhand) | Desarrollo móvil y ciberseguridad",
+    "description": "Silvio Aguilar (@kurzerhand), desarrollador full stack y estudiante de ciberseguridad en Madrid. Apps móviles con Flutter y React Native, web con React y TypeScript.",
+    "cvTitle": "CV · Silvio Aguilar (@kurzerhand)",
+    "labTitle": "Laboratorio · Silvio Aguilar (@kurzerhand)",
+    "notFoundTitle": "Página no encontrada · Silvio Aguilar"
+  },
+  "a11y": { "skip": "Saltar al contenido", "menu": "Menú", "close": "Cerrar", "external": "(se abre en otra pestaña)" },
+  "nav": { "home": "Ficha", "credits": "Créditos", "timeline": "Trayectoria", "bio": "Bio", "contact": "Contacto", "cv": "CV", "lab": "Laboratorio" },
+  "theme": { "label": "Tema", "light": "Claro", "dark": "Oscuro", "system": "Sistema" },
+  "lang": { "label": "Idioma", "pending": "Traducción pendiente de revisión" },
+  "profile": { "label": "Perfil", "main": "principal", "rising": "en ascenso", "secondary": "secundario" },
+  "hero": { "basedIn": "Madrid, España", "knownFor": "Conocido por", "languages": "Idiomas", "studying": "Formación actual", "contact": "Contactar", "viewCv": "Ver CV" },
+  "credits": { "title": "Créditos", "eyebrow": "Filmografía técnica", "all": "Todos", "year": "Año", "role": "Rol", "stack": "Stack", "noYear": "—", "more": "Más repositorios públicos", "moreHint": "Generado automáticamente desde la API de GitHub", "stars": "estrellas" },
+  "status": { "published": "Publicada", "private": "Repositorio privado", "inDevelopment": "En desarrollo", "public": "Código abierto" },
+  "links": { "web": "Web", "store": "Tienda", "repo": "Código", "info": "Más info" },
+  "category": { "mobile": "Móvil", "web": "Web", "java": "Java", "games": "Videojuegos", "hardware": "Hardware", "ai": "IA", "film": "Cine y sonido" },
+  "timeline": { "title": "Trayectoria", "eyebrow": "Formación y experiencia", "now": "actualidad", "education": "Formación", "work": "Experiencia", "credit": "Crédito" },
+  "bio": { "title": "Biografía", "eyebrow": "Sobre mí" },
+  "stack": { "title": "Stack por áreas", "eyebrow": "Herramientas", "learning": "en estudio" },
+  "lab": { "title": "Laboratorio", "eyebrow": "Demos de componentes", "intro": "Mini aplicaciones rehechas como componentes de React. Todo ocurre en tu navegador: no se sube nada.", "teaser": "Abrir el laboratorio",
+    "palette": { "title": "Extractor de paleta", "desc": "Elige una imagen y obtén sus colores dominantes.", "pick": "Elegir imagen", "copy": "Copiar", "copied": "Copiado", "empty": "Aún no hay imagen." },
+    "pattern": { "title": "Generador de patrones", "desc": "Patrones de color aleatorios listos para copiar como CSS.", "generate": "Generar", "angle": "Ángulo", "stripes": "Ancho de franja", "copyCss": "Copiar CSS" },
+    "drum": { "title": "DrumPad", "desc": "Caja de ritmos sintetizada con Web Audio. Usa el ratón o las teclas indicadas.", "kick": "Bombo", "snare": "Caja", "hat": "Charles", "clap": "Palmas", "tom": "Tom", "rim": "Aro", "cowbell": "Cencerro", "noise": "Ruido" }
+  },
+  "contact": { "title": "Contacto", "eyebrow": "Hablemos", "intro": "Escríbeme desde el formulario o encuéntrame en redes.", "name": "Nombre", "email": "Correo electrónico", "message": "Mensaje", "send": "Enviar", "sending": "Enviando…", "ok": "Mensaje enviado. Gracias, te responderé pronto.", "error": "No se pudo enviar. Inténtalo de nuevo o escríbeme por LinkedIn.", "required": "Este campo es obligatorio.", "invalidEmail": "Introduce un correo válido.", "short": "Escribe al menos 10 caracteres.", "privacy": "Solo uso tus datos para responderte. El formulario lo gestiona Formspree.", "networks": "Redes" },
+  "cv": { "title": "Currículum", "download": "Descargar PDF", "print": "Imprimir", "summary": "Perfil", "experience": "Experiencia", "education": "Formación", "skills": "Competencias", "projects": "Proyectos destacados", "languages": "Idiomas", "back": "Volver a la ficha" },
+  "notFound": { "title": "Escena no encontrada", "body": "Esta página no existe o ha cambiado de sitio.", "home": "Ir a la ficha" },
+  "footer": { "built": "Hecho con React, TypeScript y Three.js.", "source": "Código fuente" }
+}

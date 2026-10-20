@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Private sources (never commit)
+legacy-source/
+MASTER_PROMPT*.md
+*.private.md

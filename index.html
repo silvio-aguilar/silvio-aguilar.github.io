@@ -1,13 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="es" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>silvio-aguilar.github.io</title>
+    <!--head-meta-->
+    <title>Silvio Aguilar (@kurzerhand) | Desarrollo móvil y ciberseguridad</title>
+    <meta name="theme-color" content="#0e0e0d" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script id="theme-init">(function(){var p='system';try{p=localStorage.getItem('theme')||'system'}catch(e){}var d=p==='dark'||(p==='system'&&matchMedia('(prefers-color-scheme: dark)').matches);var r=document.documentElement;r.dataset.theme=d?'dark':'light';r.dataset.themePref=p})()</script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><!--app-html--></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

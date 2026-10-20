@@ -1,0 +1,13 @@
+[
+  { "id": "euroformac", "kind": "education", "profiles": ["dev", "security"], "start": "2025", "end": "2027", "current": true, "org": "Euroformac Madrid" },
+  { "id": "gdpymes", "kind": "education", "profiles": ["dev"], "start": "2025-10", "org": "CEINPRO" },
+  { "id": "godman", "kind": "work", "profiles": ["dev"], "start": "2024-01", "end": "2024-05", "org": "Godman Enterprises", "todo": "Falta el rol en Godman Enterprises" },
+  { "id": "los-ilusos", "kind": "work", "profiles": ["audiovisual"], "start": "2023-02", "end": "2023-10", "org": "Los Ilusos Films SL" },
+  { "id": "factoria-f5", "kind": "education", "profiles": ["dev", "security"], "start": "2023", "org": "Fundación Tomillo · Factoría F5" },
+  { "id": "sonido", "kind": "education", "profiles": ["audiovisual"], "start": "2023", "org": "IFP Carlos María Rodríguez de Valcárcel", "todo": "Confirmar año de fin (2022 o 2023)" },
+  { "id": "ifcd0210", "kind": "education", "profiles": ["dev"], "org": "Certificado de profesionalidad", "todo": "Falta el año y el centro del IFCD0210" },
+  { "id": "quien-lo-impide", "kind": "credit", "profiles": ["audiovisual"], "start": "2021", "org": "Dir. Jonás Trueba" },
+  { "id": "utad", "kind": "education", "profiles": ["dev"], "org": "U-tad", "todo": "Falta titulación, años y si se completó" },
+  { "id": "cine-en-curso", "kind": "education", "profiles": ["audiovisual"], "org": "Cine en Curso" },
+  { "id": "bachillerato", "kind": "education", "profiles": ["audiovisual"], "org": "IES Rey Pastor" }
+]

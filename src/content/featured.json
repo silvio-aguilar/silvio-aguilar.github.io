@@ -1,0 +1,19 @@
+[
+  {"slug": "bguardian", "profiles": ["dev", "security"], "knownFor": ["dev", "security"], "category": "mobile", "stack": ["Flutter", "Dart", "Firebase"], "status": "published", "links": {"web": "https://bguardian.app"}},
+  {"slug": "horizon", "profiles": ["dev"], "knownFor": ["dev"], "category": "mobile", "stack": ["Flutter", "Firebase", "LLM API"], "links": {}},
+  {"slug": "veoveo", "profiles": ["dev"], "knownFor": ["dev"], "category": "web", "stack": ["React", "TypeScript", "Open data"], "status": "private", "links": {}},
+  {"slug": "top-word", "profiles": ["dev"], "knownFor": ["dev"], "category": "web", "year": 2024, "stack": [], "status": "published", "links": {"web": "https://top-word.impulsa-tu.com"}},
+  {"slug": "centinela", "profiles": ["dev", "security"], "knownFor": ["security"], "category": "mobile", "stack": ["Kotlin", "Android", "Firebase", "Web"], "status": "inDevelopment", "links": {}},
+  {"slug": "iaexp", "profiles": ["dev", "security"], "knownFor": ["security"], "category": "ai", "stack": ["Python", "Ollama"], "links": {}},
+  {"slug": "kimera", "profiles": ["dev"], "knownFor": [], "category": "mobile", "stack": ["React Native", "Expo"], "links": {}},
+  {"slug": "gold", "profiles": ["dev"], "knownFor": [], "category": "web", "stack": ["React", "Tailwind", "Supabase"], "status": "private", "links": {}},
+  {"slug": "elecciones-2026", "profiles": ["dev"], "knownFor": [], "category": "web", "year": 2026, "stack": [], "links": {}},
+  {"slug": "frutigerchat", "profiles": ["dev", "security"], "knownFor": [], "category": "java", "stack": ["Swing", "MariaDB", "TCP sockets"], "links": {}},
+  {"slug": "nextcode", "profiles": ["dev"], "knownFor": [], "category": "java", "stack": ["Swing"], "links": {}},
+  {"slug": "miprimerjuego", "profiles": ["dev"], "knownFor": [], "category": "games", "stack": ["Unity 6", "C#", "URP"], "links": {}},
+  {"slug": "zombiefortress", "profiles": ["dev"], "knownFor": [], "category": "games", "stack": ["Unity", "C#", "Photon", "Firebase"], "links": {}},
+  {"slug": "robot-esp32", "profiles": ["dev"], "knownFor": [], "category": "hardware", "stack": ["ESP32", "C++", "DualSense"], "links": {}},
+  {"slug": "quien-lo-impide", "profiles": ["audiovisual"], "knownFor": ["audiovisual"], "category": "film", "year": 2021, "stack": [], "links": {}, "todo": "Añadir enlace a la ficha de la película"},
+  {"slug": "los-ilusos-films", "profiles": ["audiovisual"], "knownFor": ["audiovisual"], "category": "film", "year": 2023, "stack": [], "links": {}},
+  {"slug": "sonido-cfgs", "profiles": ["audiovisual"], "knownFor": ["audiovisual"], "category": "film", "year": 2023, "stack": ["Directo", "Estudio", "Postproducción"], "links": {}}
+]
