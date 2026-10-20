@@ -28,10 +28,7 @@ export function Timeline() {
           const relevant = item.profiles.includes(profile)
           const period = formatPeriod(item.start, item.end, lang, t('timeline.now'), item.current)
           return (
-            <li
-              key={item.id}
-              className={`relative pb-8 pl-8 transition-opacity ${relevant ? '' : 'opacity-55'}`}
-            >
+            <li key={item.id} className="relative pb-8 pl-8">
               <span
                 className={`absolute -left-3.5 top-0 grid h-7 w-7 place-items-center rounded-full border ${
                   relevant

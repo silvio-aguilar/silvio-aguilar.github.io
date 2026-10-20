@@ -6,6 +6,8 @@ import { PosterFallback } from './PosterFallback'
 
 const Scene = lazy(() => import('./Scene'))
 
+const DESKTOP = '(pointer: fine) and (min-width: 768px)'
+
 function webglAvailable() {
   try {
     const c = document.createElement('canvas')
@@ -22,12 +24,16 @@ export function HeroVisual() {
   const reduced = usePrefersReducedMotion()
   const [ready, setReady] = useState(false)
 
+  const canRender = () => !reduced && webglAvailable()
+
+  // Desktop: load when idle. Touch/small screens: only on demand (saves CPU and battery).
   useEffect(() => {
-    if (reduced || !webglAvailable()) return
+    if (!canRender() || !window.matchMedia(DESKTOP).matches) return
     const idle = window.requestIdleCallback ?? ((cb: () => void) => window.setTimeout(cb, 1200))
     const cancel = window.cancelIdleCallback ?? window.clearTimeout
     const id = idle(() => setReady(true))
     return () => cancel(id)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [reduced])
 
   const fallback = <PosterFallback profile={profile} />

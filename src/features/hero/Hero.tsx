@@ -1,5 +1,4 @@
 import { ArrowRight, FileText, MapPin } from 'lucide-react'
-import { AnimatePresence, motion } from 'motion/react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 import { Badge } from '../../components/ui/Badge'
@@ -7,7 +6,6 @@ import { buttonVariants } from '../../components/ui/buttonStyles'
 import { getContent, knownFor } from '../../content'
 import { person } from '../../content/site'
 import { langPath, useLang } from '../../lib/useLang'
-import { usePrefersReducedMotion } from '../../lib/usePrefersReducedMotion'
 import { projectView } from '../credits/projectMeta'
 import { ProfileSwitcher } from '../profiles/ProfileSwitcher'
 import { useProfile } from '../profiles/store'
@@ -18,18 +16,8 @@ export function Hero() {
   const lang = useLang()
   const content = getContent(lang)
   const profile = useProfile((s) => s.profile)
-  const reduced = usePrefersReducedMotion()
   const p = content.profiles[profile]
   const items = knownFor(profile)
-
-  const fade = reduced
-    ? {}
-    : {
-        initial: { opacity: 0, y: 8 },
-        animate: { opacity: 1, y: 0 },
-        exit: { opacity: 0, y: -8 },
-        transition: { duration: 0.25 },
-      }
 
   return (
     <section aria-labelledby="hero-title" className="border-b border-line bg-surface">
@@ -74,45 +62,43 @@ export function Hero() {
             <ProfileSwitcher />
           </div>
 
-          <AnimatePresence mode="wait" initial={false}>
-            <motion.div key={profile} {...fade} aria-live="polite">
-              <p className="mt-5 max-w-2xl text-base leading-relaxed">
-                <strong className="font-semibold">{p.tagline}.</strong> {p.summary}
-              </p>
+          <div key={profile} className="animate-fade-in" aria-live="polite">
+            <p className="mt-5 max-w-2xl text-base leading-relaxed">
+              <strong className="font-semibold">{p.tagline}.</strong> {p.summary}
+            </p>
 
-              <h2 className="mt-7 mb-3 font-mono text-xs uppercase tracking-[0.2em] text-muted">
-                {t('hero.knownFor')}
-              </h2>
-              <ul className="grid grid-cols-2 gap-3 lg:grid-cols-4">
-                {items.map((item) => {
-                  const text = content.projects[item.slug]
-                  const { status, year } = projectView(item)
-                  return (
-                    <li key={item.slug}>
-                      <a
-                        href={`#credit-${item.slug}`}
-                        className="group block h-full rounded-md border border-line bg-bg p-3 transition-colors hover:border-accent"
-                      >
-                        <span
-                          className="mb-2 block h-1 w-8 bg-accent transition-all group-hover:w-14"
-                          aria-hidden="true"
-                        />
-                        <span className="block font-semibold leading-tight">{text?.title}</span>
-                        <span className="mt-1 block text-xs text-muted">
-                          {[text?.role, year].filter(Boolean).join(' · ')}
+            <h2 className="mt-7 mb-3 font-mono text-xs uppercase tracking-[0.2em] text-muted">
+              {t('hero.knownFor')}
+            </h2>
+            <ul className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+              {items.map((item) => {
+                const text = content.projects[item.slug]
+                const { status, year } = projectView(item)
+                return (
+                  <li key={item.slug}>
+                    <a
+                      href={`#credit-${item.slug}`}
+                      className="group block h-full rounded-md border border-line bg-bg p-3 transition-colors hover:border-accent"
+                    >
+                      <span
+                        className="mb-2 block h-1 w-8 bg-accent transition-all group-hover:w-14"
+                        aria-hidden="true"
+                      />
+                      <span className="block font-semibold leading-tight">{text?.title}</span>
+                      <span className="mt-1 block text-xs text-muted">
+                        {[text?.role, year].filter(Boolean).join(' · ')}
+                      </span>
+                      {status && (
+                        <span className="mt-2 block">
+                          <Badge tone="outline">{t(`status.${status}`)}</Badge>
                         </span>
-                        {status && (
-                          <span className="mt-2 block">
-                            <Badge tone="outline">{t(`status.${status}`)}</Badge>
-                          </span>
-                        )}
-                      </a>
-                    </li>
-                  )
-                })}
-              </ul>
-            </motion.div>
-          </AnimatePresence>
+                      )}
+                    </a>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
 
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
