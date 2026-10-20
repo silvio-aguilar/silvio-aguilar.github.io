@@ -48,7 +48,7 @@ export function Hero() {
             <span className="inline-flex items-center gap-1">
               <MapPin size={14} aria-hidden="true" /> {t('hero.basedIn')}
             </span>
-            <span aria-hidden="true">·</span>
+            <span aria-hidden="true" className="hidden sm:inline">·</span>
             <span>
               {t('hero.languages')}:{' '}
               {content.languages.map((l) => `${l.name} (${l.level})`).join(', ')}
