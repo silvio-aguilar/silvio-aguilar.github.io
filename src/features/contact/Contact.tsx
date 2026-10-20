@@ -57,18 +57,52 @@ export function Contact() {
         <form noValidate onSubmit={onSubmit} className="max-w-xl space-y-4">
           <p className="text-muted">{t('contact.intro')}</p>
           <div>
-            <label htmlFor="name" className="text-sm font-medium">{t('contact.name')}</label>
-            <input id="name" name="name" autoComplete="name" value={values.name} onChange={set('name')} aria-invalid={!!errors.name} aria-describedby={errors.name ? 'name-error' : undefined} className={fieldCls} />
+            <label htmlFor="name" className="text-sm font-medium">
+              {t('contact.name')}
+            </label>
+            <input
+              id="name"
+              name="name"
+              autoComplete="name"
+              value={values.name}
+              onChange={set('name')}
+              aria-invalid={!!errors.name}
+              aria-describedby={errors.name ? 'name-error' : undefined}
+              className={fieldCls}
+            />
             {err('name')}
           </div>
           <div>
-            <label htmlFor="email" className="text-sm font-medium">{t('contact.email')}</label>
-            <input id="email" name="email" type="email" autoComplete="email" value={values.email} onChange={set('email')} aria-invalid={!!errors.email} aria-describedby={errors.email ? 'email-error' : undefined} className={fieldCls} />
+            <label htmlFor="email" className="text-sm font-medium">
+              {t('contact.email')}
+            </label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autoComplete="email"
+              value={values.email}
+              onChange={set('email')}
+              aria-invalid={!!errors.email}
+              aria-describedby={errors.email ? 'email-error' : undefined}
+              className={fieldCls}
+            />
             {err('email')}
           </div>
           <div>
-            <label htmlFor="message" className="text-sm font-medium">{t('contact.message')}</label>
-            <textarea id="message" name="message" rows={5} value={values.message} onChange={set('message')} aria-invalid={!!errors.message} aria-describedby={errors.message ? 'message-error' : undefined} className={fieldCls} />
+            <label htmlFor="message" className="text-sm font-medium">
+              {t('contact.message')}
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows={5}
+              value={values.message}
+              onChange={set('message')}
+              aria-invalid={!!errors.message}
+              aria-describedby={errors.message ? 'message-error' : undefined}
+              className={fieldCls}
+            />
             {err('message')}
           </div>
           {/* Honeypot: hidden from people and assistive tech */}
@@ -83,18 +117,26 @@ export function Contact() {
             </button>
             <p role="status" className="text-sm">
               {state === 'ok' && t('contact.ok')}
-              {state === 'error' && <span className="text-red-600 dark:text-red-400">{t('contact.error')}</span>}
+              {state === 'error' && (
+                <span className="text-red-600 dark:text-red-400">{t('contact.error')}</span>
+              )}
             </p>
           </div>
           <p className="text-xs text-muted">{t('contact.privacy')}</p>
         </form>
 
         <div>
-          <h3 className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-muted">{t('contact.networks')}</h3>
+          <h3 className="mb-3 font-mono text-xs uppercase tracking-[0.2em] text-muted">
+            {t('contact.networks')}
+          </h3>
           <ul className="space-y-2">
             {[...socialLinks, ...productLinks].map((l) => (
               <li key={l.id}>
-                <ExternalLink href={l.url} className="flex items-center justify-between rounded-md border border-line bg-surface px-3 py-2 text-sm hover:border-accent" srHint={t('a11y.external')}>
+                <ExternalLink
+                  href={l.url}
+                  className="flex items-center justify-between rounded-md border border-line bg-surface px-3 py-2 text-sm hover:border-accent"
+                  srHint={t('a11y.external')}
+                >
                   {l.label} <span aria-hidden="true">↗</span>
                 </ExternalLink>
               </li>

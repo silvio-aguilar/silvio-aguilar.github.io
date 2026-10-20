@@ -7,7 +7,11 @@ import { Todo } from '../../lib/Todo'
 import { useLang } from '../../lib/useLang'
 import { useProfile } from '../profiles/store'
 
-const icons: Record<TimelineKind, typeof BookOpen> = { education: BookOpen, work: Briefcase, credit: Film }
+const icons: Record<TimelineKind, typeof BookOpen> = {
+  education: BookOpen,
+  work: Briefcase,
+  credit: Film,
+}
 
 export function Timeline() {
   const { t } = useTranslation()
@@ -24,10 +28,15 @@ export function Timeline() {
           const relevant = item.profiles.includes(profile)
           const period = formatPeriod(item.start, item.end, lang, t('timeline.now'), item.current)
           return (
-            <li key={item.id} className={`relative pb-8 pl-8 transition-opacity ${relevant ? '' : 'opacity-55'}`}>
+            <li
+              key={item.id}
+              className={`relative pb-8 pl-8 transition-opacity ${relevant ? '' : 'opacity-55'}`}
+            >
               <span
                 className={`absolute -left-3.5 top-0 grid h-7 w-7 place-items-center rounded-full border ${
-                  relevant ? 'border-accent bg-accent text-accent-fg' : 'border-line bg-surface text-muted'
+                  relevant
+                    ? 'border-accent bg-accent text-accent-fg'
+                    : 'border-line bg-surface text-muted'
                 }`}
                 aria-hidden="true"
               >

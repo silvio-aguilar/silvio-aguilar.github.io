@@ -19,7 +19,11 @@ export function Footer() {
             </li>
           ))}
           <li>
-            <ExternalLink href="https://github.com/silvio-aguilar/silvio-aguilar.github.io" className="hover:text-fg" srHint={t('a11y.external')}>
+            <ExternalLink
+              href="https://github.com/silvio-aguilar/silvio-aguilar.github.io"
+              className="hover:text-fg"
+              srHint={t('a11y.external')}
+            >
               {t('footer.source')}
             </ExternalLink>
           </li>

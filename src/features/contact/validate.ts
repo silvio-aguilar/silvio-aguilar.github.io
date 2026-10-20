@@ -4,7 +4,9 @@ export interface ContactValues {
   message: string
 }
 
-export type ContactErrors = Partial<Record<keyof ContactValues, 'required' | 'invalidEmail' | 'short'>>
+export type ContactErrors = Partial<
+  Record<keyof ContactValues, 'required' | 'invalidEmail' | 'short'>
+>
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
 

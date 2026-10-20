@@ -4,3 +4,5 @@ node_modules
 package-lock.json
 legacy-source
 src/content/generated
+public
+*.md

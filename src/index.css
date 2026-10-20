@@ -48,9 +48,15 @@
   color-scheme: dark;
 }
 
-[data-profile='dev'] { --accent: var(--accent-dev); }
-[data-profile='security'] { --accent: var(--accent-security); }
-[data-profile='audiovisual'] { --accent: var(--accent-audiovisual); }
+[data-profile='dev'] {
+  --accent: var(--accent-dev);
+}
+[data-profile='security'] {
+  --accent: var(--accent-security);
+}
+[data-profile='audiovisual'] {
+  --accent: var(--accent-audiovisual);
+}
 
 html {
   background: var(--bg);
@@ -65,7 +71,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-
 :focus-visible {
   outline: 2px solid var(--accent, currentColor);
   outline-offset: 2px;
@@ -77,12 +82,21 @@ body {
 }
 
 /* Lenis */
-html.lenis, html.lenis body { height: auto; }
-.lenis.lenis-smooth { scroll-behavior: auto !important; }
-.lenis.lenis-stopped { overflow: hidden; }
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
@@ -90,8 +104,16 @@ html.lenis, html.lenis body { height: auto; }
 }
 
 @media print {
-  .no-print { display: none !important; }
-  :root, :root[data-theme='dark'] {
-    --bg: #fff; --surface: #fff; --surface-2: #fff; --fg: #000; --muted: #333; --line: #ccc;
+  .no-print {
+    display: none !important;
+  }
+  :root,
+  :root[data-theme='dark'] {
+    --bg: #fff;
+    --surface: #fff;
+    --surface-2: #fff;
+    --fg: #000;
+    --muted: #333;
+    --line: #ccc;
   }
 }

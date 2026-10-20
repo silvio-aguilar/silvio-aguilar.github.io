@@ -7,7 +7,19 @@ import { mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { writeCvPdf } from './lib/cvPdf'
-import { LANGS, SITE_URL, alternates, csp, esc, jsonLd, ogLocale, pagePath, sha256, type Lang, type Page } from './lib/seo'
+import {
+  LANGS,
+  SITE_URL,
+  alternates,
+  csp,
+  esc,
+  jsonLd,
+  ogLocale,
+  pagePath,
+  sha256,
+  type Lang,
+  type Page,
+} from './lib/seo'
 
 const root = resolve(import.meta.dirname, '..')
 const dist = resolve(root, 'dist')
@@ -29,7 +41,18 @@ const sameAs = [
   'https://bguardian.app',
   'https://top-word.impulsa-tu.com',
 ]
-const knowsAbout = ['Flutter', 'React Native', 'React', 'TypeScript', 'Firebase', 'Supabase', 'Kotlin', 'Unity', 'Cybersecurity', 'Kali Linux']
+const knowsAbout = [
+  'Flutter',
+  'React Native',
+  'React',
+  'TypeScript',
+  'Firebase',
+  'Supabase',
+  'Kotlin',
+  'Unity',
+  'Cybersecurity',
+  'Kali Linux',
+]
 
 function write(path: string, html: string) {
   const file = resolve(dist, `.${path}`, path.endsWith('.html') ? '' : 'index.html')
@@ -70,12 +93,16 @@ async function build(o: PageOpts): Promise<string> {
     `<meta property="og:image:width" content="1200" />`,
     `<meta property="og:image:height" content="630" />`,
     `<meta property="og:locale" content="${ogLocale[o.lang]}" />`,
-    ...LANGS.filter((l) => l !== o.lang).map((l) => `<meta property="og:locale:alternate" content="${ogLocale[l]}" />`),
+    ...LANGS.filter((l) => l !== o.lang).map(
+      (l) => `<meta property="og:locale:alternate" content="${ogLocale[l]}" />`,
+    ),
     `<meta property="profile:first_name" content="Silvio" />`,
     `<meta property="profile:last_name" content="Aguilar" />`,
     `<meta property="profile:username" content="kurzerhand" />`,
     `<meta name="twitter:card" content="summary_large_image" />`,
-    o.page === '' || o.page === null ? jsonLd(o.lang, t.seo.title.split('|')[1]?.trim() ?? '', sameAs, knowsAbout) : '',
+    o.page === '' || o.page === null
+      ? jsonLd(o.lang, t.seo.title.split('|')[1]?.trim() ?? '', sameAs, knowsAbout)
+      : '',
     ...(o.extraScripts ?? []).map((s) => `<script>${s}</script>`),
   ]
     .filter(Boolean)
@@ -96,7 +123,17 @@ for (const lang of LANGS) {
   const titles: Record<Page, string> = { '': seo.title, cv: seo.cvTitle, lab: seo.labTitle }
   for (const page of pages) {
     const path = pagePath(lang, page)
-    write(path, await build({ lang, page, url: path, route: path, title: titles[page], description: seo.description }))
+    write(
+      path,
+      await build({
+        lang,
+        page,
+        url: path,
+        route: path,
+        title: titles[page],
+        description: seo.description,
+      }),
+    )
     sitemap.push(
       `<url><loc>${SITE_URL}${path}</loc>${LANGS.map((l) => `<xhtml:link rel="alternate" hreflang="${l}" href="${SITE_URL}${pagePath(l, page)}"/>`).join('')}</url>`,
     )
@@ -106,21 +143,43 @@ for (const lang of LANGS) {
 // Root: Spanish content for crawlers without JS, instant redirect to the preferred language.
 {
   const seo = ssr.resources.es.translation.seo
-  const html = await build({ lang: 'es', page: null, url: '/es/', route: 'root', title: seo.title, description: seo.description, extraScripts: [redirectScript] })
+  const html = await build({
+    lang: 'es',
+    page: null,
+    url: '/es/',
+    route: 'root',
+    title: seo.title,
+    description: seo.description,
+    extraScripts: [redirectScript],
+  })
   writeFileSync(resolve(dist, 'index.html'), html)
 }
 
 // Real 404 (GitHub Pages serves it with status 404).
 {
   const seo = ssr.resources.es.translation.seo
-  write('/404.html', await build({ lang: 'es', page: null, url: '/es/404/', route: '/404', title: seo.notFoundTitle, description: seo.description, noindex: true }))
+  write(
+    '/404.html',
+    await build({
+      lang: 'es',
+      page: null,
+      url: '/es/404/',
+      route: '/404',
+      title: seo.notFoundTitle,
+      description: seo.description,
+      noindex: true,
+    }),
+  )
 }
 
 writeFileSync(
   resolve(dist, 'sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${sitemap.join('\n')}\n</urlset>\n`,
 )
-writeFileSync(resolve(dist, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`)
+writeFileSync(
+  resolve(dist, 'robots.txt'),
+  `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`,
+)
 
 // CV PDFs from the same data as the CV page.
 mkdirSync(resolve(dist, 'cv'), { recursive: true })
@@ -143,4 +202,6 @@ for (const lang of LANGS) {
 }
 
 rmSync(resolve(root, 'dist-ssr'), { recursive: true, force: true })
-console.log(`[prerender] ${LANGS.length * pages.length} pages, root, 404, sitemap, robots, ${LANGS.length} PDFs`)
+console.log(
+  `[prerender] ${LANGS.length * pages.length} pages, root, 404, sitemap, robots, ${LANGS.length} PDFs`,
+)

@@ -15,10 +15,20 @@ interface Props<T extends string> {
 }
 
 /** Accessible radio group rendered as buttons. */
-export function SegmentedControl<T extends string>({ label, value, options, onChange, size = 'sm' }: Props<T>) {
+export function SegmentedControl<T extends string>({
+  label,
+  value,
+  options,
+  onChange,
+  size = 'sm',
+}: Props<T>) {
   const pad = size === 'sm' ? 'px-2 py-1 text-xs' : 'px-3 py-2 text-sm'
   return (
-    <div role="radiogroup" aria-label={label} className="inline-flex rounded-md border border-line bg-surface p-0.5">
+    <div
+      role="radiogroup"
+      aria-label={label}
+      className="inline-flex rounded-md border border-line bg-surface p-0.5"
+    >
       {options.map((o) => {
         const active = o.value === value
         return (

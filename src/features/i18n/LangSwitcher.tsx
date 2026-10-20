@@ -28,7 +28,9 @@ export function LangSwitcher() {
       onChange={change}
       options={LANGS.map((l) => ({
         value: l,
-        title: PENDING_REVIEW.includes(l) ? `${LANG_NAMES[l]} · ${t('lang.pending')}` : LANG_NAMES[l],
+        title: PENDING_REVIEW.includes(l)
+          ? `${LANG_NAMES[l]} · ${t('lang.pending')}`
+          : LANG_NAMES[l],
         label: (
           <span lang={l}>
             {l.toUpperCase()}

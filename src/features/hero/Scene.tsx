@@ -64,7 +64,11 @@ function Reel({ color }: { color: string }) {
 export default function Scene({ profile, dark }: { profile: ProfileId; dark: boolean }) {
   const color = profileAccent[profile][dark ? 'dark' : 'light']
   return (
-    <Canvas dpr={[1, 1.75]} camera={{ position: [0, 0, 6], fov: 40 }} gl={{ antialias: true, alpha: true }}>
+    <Canvas
+      dpr={[1, 1.75]}
+      camera={{ position: [0, 0, 6], fov: 40 }}
+      gl={{ antialias: true, alpha: true }}
+    >
       <ambientLight intensity={0.6} />
       <directionalLight position={[3, 4, 5]} intensity={1.4} />
       <pointLight position={[-4, -2, 3]} intensity={12} color={color} />

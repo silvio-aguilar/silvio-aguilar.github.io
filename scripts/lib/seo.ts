@@ -12,7 +12,8 @@ export const pagePath = (lang: Lang, page: Page) => (page ? `/${lang}/${page}/` 
 export const esc = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 
-export const sha256 = (code: string) => `'sha256-${createHash('sha256').update(code).digest('base64')}'`
+export const sha256 = (code: string) =>
+  `'sha256-${createHash('sha256').update(code).digest('base64')}'`
 
 export function csp(scriptHashes: string[]): string {
   return [
@@ -35,11 +36,18 @@ export function alternates(page: Page): string {
   const links = LANGS.map(
     (l) => `<link rel="alternate" hreflang="${l}" href="${SITE_URL}${pagePath(l, page)}" />`,
   )
-  links.push(`<link rel="alternate" hreflang="x-default" href="${SITE_URL}${page ? pagePath('es', page) : '/'}" />`)
+  links.push(
+    `<link rel="alternate" hreflang="x-default" href="${SITE_URL}${page ? pagePath('es', page) : '/'}" />`,
+  )
   return links.join('\n    ')
 }
 
-export function jsonLd(lang: Lang, jobTitle: string, sameAs: string[], knowsAbout: string[]): string {
+export function jsonLd(
+  lang: Lang,
+  jobTitle: string,
+  sameAs: string[],
+  knowsAbout: string[],
+): string {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'Person',

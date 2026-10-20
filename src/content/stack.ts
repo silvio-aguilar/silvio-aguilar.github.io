@@ -47,7 +47,11 @@ export const stackGroups: StackGroup[] = [
       { name: 'Detección de amenazas' },
     ],
   },
-  { id: 'games', profiles: ['dev'], items: [{ name: 'Unity' }, { name: 'C#' }, { name: 'Photon' }] },
+  {
+    id: 'games',
+    profiles: ['dev'],
+    items: [{ name: 'Unity' }, { name: 'C#' }, { name: 'Photon' }],
+  },
   {
     id: 'ai',
     profiles: ['dev', 'security'],

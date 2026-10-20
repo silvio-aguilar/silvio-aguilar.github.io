@@ -36,7 +36,11 @@ const de: LocalizedContent = {
       role: 'Design und Entwicklung',
       note: 'Google Play · v0.1.1',
     },
-    horizon: { title: 'Horizon', logline: 'Persönlicher Organizer mit KI-Assistent.', role: 'Entwicklung' },
+    horizon: {
+      title: 'Horizon',
+      logline: 'Persönlicher Organizer mit KI-Assistent.',
+      role: 'Entwicklung',
+    },
     veoveo: {
       title: 'VeoVeo',
       logline: 'Echtzeitkarte von Madrid: U-Bahn, Bus, BiciMAD, Verkehr und Kameras.',
@@ -49,7 +53,8 @@ const de: LocalizedContent = {
     },
     centinela: {
       title: 'Centinela',
-      logline: 'Abschlussprojekt: Verwaltung von Sicherheitsvorfällen mit Android-App und Web-Dashboard.',
+      logline:
+        'Abschlussprojekt: Verwaltung von Sicherheitsvorfällen mit Android-App und Web-Dashboard.',
       role: 'Abschlussprojekt',
     },
     iaexp: {
@@ -75,7 +80,11 @@ const de: LocalizedContent = {
     },
     nextcode: { title: 'NextCode', logline: 'Schlanke Desktop-IDE.', role: 'Entwicklung' },
     miprimerjuego: { title: 'MiPrimerJuego', logline: '2D-Roguelite.', role: 'Entwicklung' },
-    zombiefortress: { title: 'ZombieFortress', logline: 'Online-Multiplayer-Spiel.', role: 'Entwicklung' },
+    zombiefortress: {
+      title: 'ZombieFortress',
+      logline: 'Online-Multiplayer-Spiel.',
+      role: 'Entwicklung',
+    },
     'robot-esp32': {
       title: 'Kampfroboter',
       logline: 'Roboter mit ESP32, gesteuert über einen DualSense-Controller.',
@@ -111,7 +120,8 @@ const de: LocalizedContent = {
     'los-ilusos': { title: 'Produktionsassistent', detail: 'Produktionsfirma von Jonás Trueba.' },
     'factoria-f5': {
       title: 'Full-Stack-Webentwicklung (Bootcamp)',
-      detail: 'Frontend, Backend, Datenbanken, REST-APIs, Versionskontrolle und Webanwendungssicherheit.',
+      detail:
+        'Frontend, Backend, Datenbanken, REST-APIs, Versionskontrolle und Webanwendungssicherheit.',
     },
     sonido: { title: 'Techniker für Ton in Audiovisuellen Medien und Veranstaltungen' },
     ifcd0210: { title: 'IFCD0210 · Entwicklung von Webanwendungen (Stufe 3)' },
@@ -120,8 +130,14 @@ const de: LocalizedContent = {
       detail: 'Goya für den besten Dokumentarfilm.',
     },
     utad: { title: 'Studium an der U-tad' },
-    'cine-en-curso': { title: 'Filmworkshop mit Jonás Trueba', detail: 'Programm „Cine en Curso“.' },
-    bachillerato: { title: 'Abitur mit Schwerpunkt Kunst', detail: 'Mit Workshops in Fotografie und Grafikdesign.' },
+    'cine-en-curso': {
+      title: 'Filmworkshop mit Jonás Trueba',
+      detail: 'Programm „Cine en Curso“.',
+    },
+    bachillerato: {
+      title: 'Abitur mit Schwerpunkt Kunst',
+      detail: 'Mit Workshops in Fotografie und Grafikdesign.',
+    },
   },
   stackGroups: {
     mobile: 'Mobile',

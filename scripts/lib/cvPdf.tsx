@@ -11,7 +11,10 @@ interface Item {
 
 export interface CvPdfInput {
   lang: string
-  labels: Record<'summary' | 'experience' | 'education' | 'skills' | 'projects' | 'languages', string>
+  labels: Record<
+    'summary' | 'experience' | 'education' | 'skills' | 'projects' | 'languages',
+    string
+  >
   now: string
   headline: string
   summary: string
@@ -30,7 +33,18 @@ const s = StyleSheet.create({
   meta: { color: '#5d5a50', marginTop: 4 },
   links: { flexDirection: 'row', flexWrap: 'wrap', marginTop: 4, gap: 8 },
   link: { color: '#8a5f00', textDecoration: 'none' },
-  h2: { fontSize: 9, fontFamily: 'Helvetica-Bold', color: '#8a5f00', textTransform: 'uppercase', letterSpacing: 1.5, marginTop: 14, marginBottom: 5, borderTopWidth: 0.5, borderTopColor: '#d9d4c7', paddingTop: 6 },
+  h2: {
+    fontSize: 9,
+    fontFamily: 'Helvetica-Bold',
+    color: '#8a5f00',
+    textTransform: 'uppercase',
+    letterSpacing: 1.5,
+    marginTop: 14,
+    marginBottom: 5,
+    borderTopWidth: 0.5,
+    borderTopColor: '#d9d4c7',
+    paddingTop: 6,
+  },
   row: { flexDirection: 'row', marginBottom: 4 },
   when: { width: 90, color: '#5d5a50' },
   body: { flex: 1 },

@@ -5,7 +5,11 @@ import { getContent } from '../../content'
 import { useLang } from '../../lib/useLang'
 import { useProfile } from './store'
 
-const icons: Record<ProfileId, typeof Code2> = { dev: Code2, security: ShieldCheck, audiovisual: Clapperboard }
+const icons: Record<ProfileId, typeof Code2> = {
+  dev: Code2,
+  security: ShieldCheck,
+  audiovisual: Clapperboard,
+}
 const rank: Record<ProfileId, 'main' | 'rising' | 'secondary'> = {
   dev: 'main',
   security: 'rising',
@@ -32,7 +36,9 @@ export function ProfileSwitcher() {
             data-profile={p}
             onClick={() => setProfile(p)}
             className={`group flex items-center gap-3 rounded-md border px-3 py-2.5 text-left transition-colors ${
-              active ? 'border-accent bg-accent/10' : 'border-line bg-surface hover:border-accent/60'
+              active
+                ? 'border-accent bg-accent/10'
+                : 'border-line bg-surface hover:border-accent/60'
             }`}
           >
             <Icon size={20} aria-hidden="true" className="shrink-0 text-accent" />

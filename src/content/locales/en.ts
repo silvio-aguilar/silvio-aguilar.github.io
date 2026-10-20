@@ -35,7 +35,11 @@ const en: LocalizedContent = {
       role: 'Design and development',
       note: 'Google Play · v0.1.1',
     },
-    horizon: { title: 'Horizon', logline: 'Personal organiser with an AI assistant.', role: 'Development' },
+    horizon: {
+      title: 'Horizon',
+      logline: 'Personal organiser with an AI assistant.',
+      role: 'Development',
+    },
     veoveo: {
       title: 'VeoVeo',
       logline: 'Real-time map of Madrid: metro, buses, BiciMAD bikes, traffic and cameras.',
@@ -48,12 +52,14 @@ const en: LocalizedContent = {
     },
     centinela: {
       title: 'Centinela',
-      logline: 'Final degree project: security incident management with an Android app and a web dashboard.',
+      logline:
+        'Final degree project: security incident management with an Android app and a web dashboard.',
       role: 'Final project',
     },
     iaexp: {
       title: 'IAExp',
-      logline: 'Local AI agent built on Ollama, with human approval in the loop before every action.',
+      logline:
+        'Local AI agent built on Ollama, with human approval in the loop before every action.',
       role: 'Development',
     },
     kimera: { title: 'Kimera', logline: 'Astrology-based dating app.', role: 'Development' },
@@ -64,7 +70,8 @@ const en: LocalizedContent = {
     },
     'elecciones-2026': {
       title: 'Elecciones 2026',
-      logline: 'Neutral information site about the Spanish general election, with an affinity quiz.',
+      logline:
+        'Neutral information site about the Spanish general election, with an affinity quiz.',
       role: 'Development',
     },
     frutigerchat: {
@@ -74,7 +81,11 @@ const en: LocalizedContent = {
     },
     nextcode: { title: 'NextCode', logline: 'Lightweight desktop IDE.', role: 'Development' },
     miprimerjuego: { title: 'MiPrimerJuego', logline: '2D roguelite.', role: 'Development' },
-    zombiefortress: { title: 'ZombieFortress', logline: 'Online multiplayer game.', role: 'Development' },
+    zombiefortress: {
+      title: 'ZombieFortress',
+      logline: 'Online multiplayer game.',
+      role: 'Development',
+    },
     'robot-esp32': {
       title: 'Combat robot',
       logline: 'ESP32-based robot driven with a DualSense controller.',
@@ -110,7 +121,8 @@ const en: LocalizedContent = {
     'los-ilusos': { title: 'Production assistant', detail: "Jonás Trueba's production company." },
     'factoria-f5': {
       title: 'Full stack web development bootcamp',
-      detail: 'Frontend, backend, databases, REST APIs, version control and web application security.',
+      detail:
+        'Frontend, backend, databases, REST APIs, version control and web application security.',
     },
     sonido: { title: 'Higher Technician in Sound for Audiovisual and Live Shows' },
     ifcd0210: { title: 'IFCD0210 · Web application development (level 3 certificate)' },
@@ -119,7 +131,10 @@ const en: LocalizedContent = {
       detail: 'Goya Award for Best Documentary.',
     },
     utad: { title: 'Studies at U-tad' },
-    'cine-en-curso': { title: 'Film workshop with Jonás Trueba', detail: '“Cine en Curso” programme.' },
+    'cine-en-curso': {
+      title: 'Film workshop with Jonás Trueba',
+      detail: '“Cine en Curso” programme.',
+    },
     bachillerato: {
       title: 'Arts Baccalaureate',
       detail: 'Including photography and graphic design workshops.',

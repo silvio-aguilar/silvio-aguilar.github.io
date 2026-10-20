@@ -8,7 +8,11 @@ export function formatPeriodPart(value: string | undefined, lang: Lang): string 
   const [y, m] = value.split('-')
   if (!m) return y ?? ''
   const d = new Date(Date.UTC(Number(y), Number(m) - 1, 1))
-  return new Intl.DateTimeFormat(locale[lang], { month: 'short', year: 'numeric', timeZone: 'UTC' }).format(d)
+  return new Intl.DateTimeFormat(locale[lang], {
+    month: 'short',
+    year: 'numeric',
+    timeZone: 'UTC',
+  }).format(d)
 }
 
 export function formatPeriod(

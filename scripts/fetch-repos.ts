@@ -33,10 +33,13 @@ async function main() {
   }
   if (process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`
   try {
-    const res = await fetch(`https://api.github.com/users/${USER}/repos?per_page=100&type=owner&sort=pushed`, {
-      headers,
-      signal: AbortSignal.timeout(15_000),
-    })
+    const res = await fetch(
+      `https://api.github.com/users/${USER}/repos?per_page=100&type=owner&sort=pushed`,
+      {
+        headers,
+        signal: AbortSignal.timeout(15_000),
+      },
+    )
     if (!res.ok) throw new Error(`GitHub API ${res.status}`)
     const data = (await res.json()) as ApiRepo[]
     const repos = data

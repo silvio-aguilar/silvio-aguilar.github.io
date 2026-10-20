@@ -19,7 +19,12 @@ export function Header() {
   const nav = (
     <>
       {anchors.map((a) => (
-        <Link key={a} to={{ pathname: langPath(lang), hash: `#${a}` }} className={linkCls} onClick={close}>
+        <Link
+          key={a}
+          to={{ pathname: langPath(lang), hash: `#${a}` }}
+          className={linkCls}
+          onClick={close}
+        >
           {t(`nav.${a}`)}
         </Link>
       ))}
@@ -28,7 +33,9 @@ export function Header() {
           key={p}
           to={langPath(lang, p)}
           onClick={close}
-          className={({ isActive }) => `${linkCls} ${isActive ? 'text-fg underline decoration-accent decoration-2 underline-offset-4' : ''}`}
+          className={({ isActive }) =>
+            `${linkCls} ${isActive ? 'text-fg underline decoration-accent decoration-2 underline-offset-4' : ''}`
+          }
         >
           {t(`nav.${p}`)}
         </NavLink>
@@ -40,10 +47,15 @@ export function Header() {
     <header className="no-print sticky top-0 z-40 border-b border-line bg-bg/85 backdrop-blur">
       <div className="mx-auto flex h-14 max-w-6xl items-center gap-4 px-4 sm:px-6">
         <Link to={langPath(lang)} className="flex items-center gap-2" onClick={close}>
-          <span aria-hidden="true" className="grid h-8 w-8 place-items-center rounded bg-accent font-display text-sm font-bold text-accent-fg">
+          <span
+            aria-hidden="true"
+            className="grid h-8 w-8 place-items-center rounded bg-accent font-display text-sm font-bold text-accent-fg"
+          >
             SA
           </span>
-          <span className="font-display text-lg font-semibold uppercase tracking-wide">{person.name}</span>
+          <span className="font-display text-lg font-semibold uppercase tracking-wide">
+            {person.name}
+          </span>
         </Link>
         <nav aria-label={t('a11y.menu')} className="ml-auto hidden items-center gap-1 lg:flex">
           {nav}

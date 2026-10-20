@@ -32,7 +32,9 @@ export function Stack() {
                 {g.items.map((item) => (
                   <li key={item.name} className="rounded bg-surface-2 px-2 py-1 text-xs">
                     {content.stackItems?.[item.name] ?? item.name}
-                    {item.learning && <span className="ml-1 text-muted">· {t('stack.learning')}</span>}
+                    {item.learning && (
+                      <span className="ml-1 text-muted">· {t('stack.learning')}</span>
+                    )}
                   </li>
                 ))}
               </ul>

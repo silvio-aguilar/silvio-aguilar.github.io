@@ -6,26 +6,137 @@
     "labTitle": "Lab · Silvio Aguilar (@kurzerhand)",
     "notFoundTitle": "Page not found · Silvio Aguilar"
   },
-  "a11y": { "skip": "Skip to content", "menu": "Menu", "close": "Close", "external": "(opens in a new tab)" },
-  "nav": { "home": "Profile", "credits": "Credits", "timeline": "Timeline", "bio": "Bio", "contact": "Contact", "cv": "CV", "lab": "Lab" },
+  "a11y": {
+    "skip": "Skip to content",
+    "menu": "Menu",
+    "close": "Close",
+    "external": "(opens in a new tab)"
+  },
+  "nav": {
+    "home": "Profile",
+    "credits": "Credits",
+    "timeline": "Timeline",
+    "bio": "Bio",
+    "contact": "Contact",
+    "cv": "CV",
+    "lab": "Lab"
+  },
   "theme": { "label": "Theme", "light": "Light", "dark": "Dark", "system": "System" },
   "lang": { "label": "Language", "pending": "Translation pending review" },
   "profile": { "label": "Profile", "main": "main", "rising": "rising", "secondary": "secondary" },
-  "hero": { "basedIn": "Madrid, Spain", "knownFor": "Known for", "languages": "Languages", "studying": "Currently studying", "contact": "Get in touch", "viewCv": "View CV" },
-  "credits": { "title": "Credits", "eyebrow": "Technical filmography", "all": "All", "year": "Year", "role": "Role", "stack": "Stack", "noYear": "—", "more": "More public repositories", "moreHint": "Generated automatically from the GitHub API", "stars": "stars" },
-  "status": { "published": "Released", "private": "Private repository", "inDevelopment": "In development", "public": "Open source" },
+  "hero": {
+    "basedIn": "Madrid, Spain",
+    "knownFor": "Known for",
+    "languages": "Languages",
+    "studying": "Currently studying",
+    "contact": "Get in touch",
+    "viewCv": "View CV"
+  },
+  "credits": {
+    "title": "Credits",
+    "eyebrow": "Technical filmography",
+    "all": "All",
+    "year": "Year",
+    "role": "Role",
+    "stack": "Stack",
+    "noYear": "—",
+    "more": "More public repositories",
+    "moreHint": "Generated automatically from the GitHub API",
+    "stars": "stars"
+  },
+  "status": {
+    "published": "Released",
+    "private": "Private repository",
+    "inDevelopment": "In development",
+    "public": "Open source"
+  },
   "links": { "web": "Website", "store": "Store", "repo": "Code", "info": "More info" },
-  "category": { "mobile": "Mobile", "web": "Web", "java": "Java", "games": "Games", "hardware": "Hardware", "ai": "AI", "film": "Film & sound" },
-  "timeline": { "title": "Timeline", "eyebrow": "Education and experience", "now": "present", "education": "Education", "work": "Experience", "credit": "Credit" },
+  "category": {
+    "mobile": "Mobile",
+    "web": "Web",
+    "java": "Java",
+    "games": "Games",
+    "hardware": "Hardware",
+    "ai": "AI",
+    "film": "Film & sound"
+  },
+  "timeline": {
+    "title": "Timeline",
+    "eyebrow": "Education and experience",
+    "now": "present",
+    "education": "Education",
+    "work": "Experience",
+    "credit": "Credit"
+  },
   "bio": { "title": "Biography", "eyebrow": "About me" },
   "stack": { "title": "Stack by area", "eyebrow": "Tools", "learning": "learning" },
-  "lab": { "title": "Lab", "eyebrow": "Component demos", "intro": "Small apps rebuilt as React components. Everything runs in your browser: nothing is uploaded.", "teaser": "Open the lab",
-    "palette": { "title": "Palette extractor", "desc": "Pick an image and get its dominant colours.", "pick": "Choose image", "copy": "Copy", "copied": "Copied", "empty": "No image yet." },
-    "pattern": { "title": "Pattern generator", "desc": "Random colour patterns, ready to copy as CSS.", "generate": "Generate", "angle": "Angle", "stripes": "Stripe width", "copyCss": "Copy CSS" },
-    "drum": { "title": "DrumPad", "desc": "Drum machine synthesised with Web Audio. Use the mouse or the keys shown.", "kick": "Kick", "snare": "Snare", "hat": "Hi-hat", "clap": "Clap", "tom": "Tom", "rim": "Rim", "cowbell": "Cowbell", "noise": "Noise" }
+  "lab": {
+    "title": "Lab",
+    "eyebrow": "Component demos",
+    "intro": "Small apps rebuilt as React components. Everything runs in your browser: nothing is uploaded.",
+    "teaser": "Open the lab",
+    "palette": {
+      "title": "Palette extractor",
+      "desc": "Pick an image and get its dominant colours.",
+      "pick": "Choose image",
+      "copy": "Copy",
+      "copied": "Copied",
+      "empty": "No image yet."
+    },
+    "pattern": {
+      "title": "Pattern generator",
+      "desc": "Random colour patterns, ready to copy as CSS.",
+      "generate": "Generate",
+      "angle": "Angle",
+      "stripes": "Stripe width",
+      "copyCss": "Copy CSS"
+    },
+    "drum": {
+      "title": "DrumPad",
+      "desc": "Drum machine synthesised with Web Audio. Use the mouse or the keys shown.",
+      "kick": "Kick",
+      "snare": "Snare",
+      "hat": "Hi-hat",
+      "clap": "Clap",
+      "tom": "Tom",
+      "rim": "Rim",
+      "cowbell": "Cowbell",
+      "noise": "Noise"
+    }
   },
-  "contact": { "title": "Contact", "eyebrow": "Let's talk", "intro": "Write to me through the form or find me on social media.", "name": "Name", "email": "Email address", "message": "Message", "send": "Send", "sending": "Sending…", "ok": "Message sent. Thanks, I'll get back to you soon.", "error": "It couldn't be sent. Please try again or message me on LinkedIn.", "required": "This field is required.", "invalidEmail": "Enter a valid email address.", "short": "Write at least 10 characters.", "privacy": "I only use your details to reply. The form is handled by Formspree.", "networks": "Social" },
-  "cv": { "title": "Résumé", "download": "Download PDF", "print": "Print", "summary": "Profile", "experience": "Experience", "education": "Education", "skills": "Skills", "projects": "Selected projects", "languages": "Languages", "back": "Back to profile" },
-  "notFound": { "title": "Scene not found", "body": "This page doesn't exist or has moved.", "home": "Go to profile" },
+  "contact": {
+    "title": "Contact",
+    "eyebrow": "Let's talk",
+    "intro": "Write to me through the form or find me on social media.",
+    "name": "Name",
+    "email": "Email address",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending…",
+    "ok": "Message sent. Thanks, I'll get back to you soon.",
+    "error": "It couldn't be sent. Please try again or message me on LinkedIn.",
+    "required": "This field is required.",
+    "invalidEmail": "Enter a valid email address.",
+    "short": "Write at least 10 characters.",
+    "privacy": "I only use your details to reply. The form is handled by Formspree.",
+    "networks": "Social"
+  },
+  "cv": {
+    "title": "Résumé",
+    "download": "Download PDF",
+    "print": "Print",
+    "summary": "Profile",
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "projects": "Selected projects",
+    "languages": "Languages",
+    "back": "Back to profile"
+  },
+  "notFound": {
+    "title": "Scene not found",
+    "body": "This page doesn't exist or has moved.",
+    "home": "Go to profile"
+  },
   "footer": { "built": "Built with React, TypeScript and Three.js.", "source": "Source code" }
 }

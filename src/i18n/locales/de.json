@@ -6,26 +6,146 @@
     "labTitle": "Labor · Silvio Aguilar (@kurzerhand)",
     "notFoundTitle": "Seite nicht gefunden · Silvio Aguilar"
   },
-  "a11y": { "skip": "Zum Inhalt springen", "menu": "Menü", "close": "Schließen", "external": "(öffnet in neuem Tab)" },
-  "nav": { "home": "Profil", "credits": "Credits", "timeline": "Werdegang", "bio": "Bio", "contact": "Kontakt", "cv": "Lebenslauf", "lab": "Labor" },
+  "a11y": {
+    "skip": "Zum Inhalt springen",
+    "menu": "Menü",
+    "close": "Schließen",
+    "external": "(öffnet in neuem Tab)"
+  },
+  "nav": {
+    "home": "Profil",
+    "credits": "Credits",
+    "timeline": "Werdegang",
+    "bio": "Bio",
+    "contact": "Kontakt",
+    "cv": "Lebenslauf",
+    "lab": "Labor"
+  },
   "theme": { "label": "Design", "light": "Hell", "dark": "Dunkel", "system": "System" },
   "lang": { "label": "Sprache", "pending": "Übersetzung wird noch geprüft" },
-  "profile": { "label": "Profil", "main": "Hauptprofil", "rising": "im Aufbau", "secondary": "Zweitprofil" },
-  "hero": { "basedIn": "Madrid, Spanien", "knownFor": "Bekannt für", "languages": "Sprachen", "studying": "Aktuelle Ausbildung", "contact": "Kontakt aufnehmen", "viewCv": "Lebenslauf ansehen" },
-  "credits": { "title": "Credits", "eyebrow": "Technische Filmografie", "all": "Alle", "year": "Jahr", "role": "Rolle", "stack": "Stack", "noYear": "—", "more": "Weitere öffentliche Repositories", "moreHint": "Automatisch aus der GitHub-API erzeugt", "stars": "Sterne" },
-  "status": { "published": "Veröffentlicht", "private": "Privates Repository", "inDevelopment": "In Entwicklung", "public": "Open Source" },
-  "links": { "web": "Website", "store": "Store", "repo": "Code", "info": "Mehr Infos" },
-  "category": { "mobile": "Mobile", "web": "Web", "java": "Java", "games": "Spiele", "hardware": "Hardware", "ai": "KI", "film": "Film & Ton" },
-  "timeline": { "title": "Werdegang", "eyebrow": "Ausbildung und Erfahrung", "now": "heute", "education": "Ausbildung", "work": "Erfahrung", "credit": "Credit" },
-  "bio": { "title": "Biografie", "eyebrow": "Über mich" },
-  "stack": { "title": "Stack nach Bereichen", "eyebrow": "Werkzeuge", "learning": "lerne ich gerade" },
-  "lab": { "title": "Labor", "eyebrow": "Komponenten-Demos", "intro": "Kleine Apps, neu gebaut als React-Komponenten. Alles läuft in deinem Browser: Es wird nichts hochgeladen.", "teaser": "Labor öffnen",
-    "palette": { "title": "Farbpaletten-Extraktor", "desc": "Wähle ein Bild und erhalte seine dominanten Farben.", "pick": "Bild wählen", "copy": "Kopieren", "copied": "Kopiert", "empty": "Noch kein Bild." },
-    "pattern": { "title": "Mustergenerator", "desc": "Zufällige Farbmuster, bereit zum Kopieren als CSS.", "generate": "Erzeugen", "angle": "Winkel", "stripes": "Streifenbreite", "copyCss": "CSS kopieren" },
-    "drum": { "title": "DrumPad", "desc": "Drumcomputer mit Web Audio. Maus oder die angezeigten Tasten verwenden.", "kick": "Bassdrum", "snare": "Snare", "hat": "Hi-Hat", "clap": "Clap", "tom": "Tom", "rim": "Rimshot", "cowbell": "Kuhglocke", "noise": "Rauschen" }
+  "profile": {
+    "label": "Profil",
+    "main": "Hauptprofil",
+    "rising": "im Aufbau",
+    "secondary": "Zweitprofil"
   },
-  "contact": { "title": "Kontakt", "eyebrow": "Schreib mir", "intro": "Schreib mir über das Formular oder finde mich in sozialen Netzwerken.", "name": "Name", "email": "E-Mail-Adresse", "message": "Nachricht", "send": "Senden", "sending": "Wird gesendet…", "ok": "Nachricht gesendet. Danke, ich melde mich bald.", "error": "Senden fehlgeschlagen. Bitte erneut versuchen oder über LinkedIn schreiben.", "required": "Pflichtfeld.", "invalidEmail": "Gib eine gültige E-Mail-Adresse ein.", "short": "Mindestens 10 Zeichen.", "privacy": "Ich nutze deine Daten nur für die Antwort. Das Formular wird von Formspree verarbeitet.", "networks": "Netzwerke" },
-  "cv": { "title": "Lebenslauf", "download": "PDF herunterladen", "print": "Drucken", "summary": "Profil", "experience": "Erfahrung", "education": "Ausbildung", "skills": "Kenntnisse", "projects": "Ausgewählte Projekte", "languages": "Sprachen", "back": "Zurück zum Profil" },
-  "notFound": { "title": "Szene nicht gefunden", "body": "Diese Seite existiert nicht oder wurde verschoben.", "home": "Zum Profil" },
+  "hero": {
+    "basedIn": "Madrid, Spanien",
+    "knownFor": "Bekannt für",
+    "languages": "Sprachen",
+    "studying": "Aktuelle Ausbildung",
+    "contact": "Kontakt aufnehmen",
+    "viewCv": "Lebenslauf ansehen"
+  },
+  "credits": {
+    "title": "Credits",
+    "eyebrow": "Technische Filmografie",
+    "all": "Alle",
+    "year": "Jahr",
+    "role": "Rolle",
+    "stack": "Stack",
+    "noYear": "—",
+    "more": "Weitere öffentliche Repositories",
+    "moreHint": "Automatisch aus der GitHub-API erzeugt",
+    "stars": "Sterne"
+  },
+  "status": {
+    "published": "Veröffentlicht",
+    "private": "Privates Repository",
+    "inDevelopment": "In Entwicklung",
+    "public": "Open Source"
+  },
+  "links": { "web": "Website", "store": "Store", "repo": "Code", "info": "Mehr Infos" },
+  "category": {
+    "mobile": "Mobile",
+    "web": "Web",
+    "java": "Java",
+    "games": "Spiele",
+    "hardware": "Hardware",
+    "ai": "KI",
+    "film": "Film & Ton"
+  },
+  "timeline": {
+    "title": "Werdegang",
+    "eyebrow": "Ausbildung und Erfahrung",
+    "now": "heute",
+    "education": "Ausbildung",
+    "work": "Erfahrung",
+    "credit": "Credit"
+  },
+  "bio": { "title": "Biografie", "eyebrow": "Über mich" },
+  "stack": {
+    "title": "Stack nach Bereichen",
+    "eyebrow": "Werkzeuge",
+    "learning": "lerne ich gerade"
+  },
+  "lab": {
+    "title": "Labor",
+    "eyebrow": "Komponenten-Demos",
+    "intro": "Kleine Apps, neu gebaut als React-Komponenten. Alles läuft in deinem Browser: Es wird nichts hochgeladen.",
+    "teaser": "Labor öffnen",
+    "palette": {
+      "title": "Farbpaletten-Extraktor",
+      "desc": "Wähle ein Bild und erhalte seine dominanten Farben.",
+      "pick": "Bild wählen",
+      "copy": "Kopieren",
+      "copied": "Kopiert",
+      "empty": "Noch kein Bild."
+    },
+    "pattern": {
+      "title": "Mustergenerator",
+      "desc": "Zufällige Farbmuster, bereit zum Kopieren als CSS.",
+      "generate": "Erzeugen",
+      "angle": "Winkel",
+      "stripes": "Streifenbreite",
+      "copyCss": "CSS kopieren"
+    },
+    "drum": {
+      "title": "DrumPad",
+      "desc": "Drumcomputer mit Web Audio. Maus oder die angezeigten Tasten verwenden.",
+      "kick": "Bassdrum",
+      "snare": "Snare",
+      "hat": "Hi-Hat",
+      "clap": "Clap",
+      "tom": "Tom",
+      "rim": "Rimshot",
+      "cowbell": "Kuhglocke",
+      "noise": "Rauschen"
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "eyebrow": "Schreib mir",
+    "intro": "Schreib mir über das Formular oder finde mich in sozialen Netzwerken.",
+    "name": "Name",
+    "email": "E-Mail-Adresse",
+    "message": "Nachricht",
+    "send": "Senden",
+    "sending": "Wird gesendet…",
+    "ok": "Nachricht gesendet. Danke, ich melde mich bald.",
+    "error": "Senden fehlgeschlagen. Bitte erneut versuchen oder über LinkedIn schreiben.",
+    "required": "Pflichtfeld.",
+    "invalidEmail": "Gib eine gültige E-Mail-Adresse ein.",
+    "short": "Mindestens 10 Zeichen.",
+    "privacy": "Ich nutze deine Daten nur für die Antwort. Das Formular wird von Formspree verarbeitet.",
+    "networks": "Netzwerke"
+  },
+  "cv": {
+    "title": "Lebenslauf",
+    "download": "PDF herunterladen",
+    "print": "Drucken",
+    "summary": "Profil",
+    "experience": "Erfahrung",
+    "education": "Ausbildung",
+    "skills": "Kenntnisse",
+    "projects": "Ausgewählte Projekte",
+    "languages": "Sprachen",
+    "back": "Zurück zum Profil"
+  },
+  "notFound": {
+    "title": "Szene nicht gefunden",
+    "body": "Diese Seite existiert nicht oder wurde verschoben.",
+    "home": "Zum Profil"
+  },
   "footer": { "built": "Gebaut mit React, TypeScript und Three.js.", "source": "Quellcode" }
 }

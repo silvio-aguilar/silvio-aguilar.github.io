@@ -49,7 +49,9 @@ export function DrumPad() {
           }}
           aria-keyshortcuts={p.key.toUpperCase()}
           className={`flex aspect-square flex-col items-center justify-center rounded-md border text-sm font-semibold transition-all ${
-            active === p.voice ? 'scale-95 border-accent bg-accent text-accent-fg' : 'border-line bg-surface-2 hover:border-accent'
+            active === p.voice
+              ? 'scale-95 border-accent bg-accent text-accent-fg'
+              : 'border-line bg-surface-2 hover:border-accent'
           }`}
         >
           {t(`lab.drum.${p.voice}`)}

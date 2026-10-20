@@ -10,10 +10,18 @@ const TEXT = new Set(['.html', '.js', '.css', '.json', '.xml', '.txt', '.svg', '
 
 const rules = [
   { name: 'placeholder', re: /\bTODO\b|CONFIRMAR/g, exts: TEXT },
-  { name: 'email', re: /[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}/g, exts: TEXT },
+  {
+    name: 'email',
+    re: /[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}/g,
+    exts: TEXT,
+  },
   // International / Spanish phone formats. JS bundles only get the +34 rule (minified numbers cause noise).
   { name: 'phone', re: /\+\s?34[\s.-]?\d{3}[\s.-]?\d{3}[\s.-]?\d{3}/g, exts: TEXT },
-  { name: 'phone', re: /(?<![\d.#-])[6789]\d{2}[\s.-]?\d{3}[\s.-]?\d{3}(?![\d.])/g, exts: new Set(['.html', '.json', '.xml', '.txt']) },
+  {
+    name: 'phone',
+    re: /(?<![\d.#-])[6789]\d{2}[\s.-]?\d{3}[\s.-]?\d{3}(?![\d.])/g,
+    exts: new Set(['.html', '.json', '.xml', '.txt']),
+  },
 ]
 
 // Known-safe matches (e.g. npm scoped names inside library code)
@@ -38,7 +46,9 @@ for (const file of files) {
     if (!exts.has(ext)) continue
     for (const m of text.matchAll(re)) {
       if (allow.some((a) => a.test(m[0]))) continue
-      const at = text.slice(Math.max(0, m.index - 30), m.index + m[0].length + 30).replace(/\s+/g, ' ')
+      const at = text
+        .slice(Math.max(0, m.index - 30), m.index + m[0].length + 30)
+        .replace(/\s+/g, ' ')
       problems.push(`${name.padEnd(11)} ${relative(DIST, file)}: …${at}…`)
     }
   }

@@ -7,7 +7,19 @@
     <title>Silvio Aguilar (@kurzerhand) | Desarrollo móvil y ciberseguridad</title>
     <meta name="theme-color" content="#0e0e0d" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <script id="theme-init">(function(){var p='system';try{p=localStorage.getItem('theme')||'system'}catch(e){}var d=p==='dark'||(p==='system'&&matchMedia('(prefers-color-scheme: dark)').matches);var r=document.documentElement;r.dataset.theme=d?'dark':'light';r.dataset.themePref=p})()</script>
+    <script id="theme-init">
+      ;(function () {
+        var p = 'system'
+        try {
+          p = localStorage.getItem('theme') || 'system'
+        } catch (e) {}
+        var d =
+          p === 'dark' || (p === 'system' && matchMedia('(prefers-color-scheme: dark)').matches)
+        var r = document.documentElement
+        r.dataset.theme = d ? 'dark' : 'light'
+        r.dataset.themePref = p
+      })()
+    </script>
   </head>
   <body>
     <div id="root"><!--app-html--></div>

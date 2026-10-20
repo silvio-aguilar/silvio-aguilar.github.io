@@ -35,7 +35,11 @@ const es: LocalizedContent = {
       role: 'Diseño y desarrollo',
       note: 'Google Play · v0.1.1',
     },
-    horizon: { title: 'Horizon', logline: 'Gestor personal con asistente de IA.', role: 'Desarrollo' },
+    horizon: {
+      title: 'Horizon',
+      logline: 'Gestor personal con asistente de IA.',
+      role: 'Desarrollo',
+    },
     veoveo: {
       title: 'VeoVeo',
       logline: 'Mapa en tiempo real de Madrid: metro, bus, BiciMAD, tráfico y cámaras.',
@@ -54,7 +58,8 @@ const es: LocalizedContent = {
     },
     iaexp: {
       title: 'IAExp',
-      logline: 'Agente de IA local con Ollama y aprobación humana en el bucle antes de cada acción.',
+      logline:
+        'Agente de IA local con Ollama y aprobación humana en el bucle antes de cada acción.',
       role: 'Desarrollo',
     },
     kimera: { title: 'Kimera', logline: 'App de citas con astrología.', role: 'Desarrollo' },
@@ -116,7 +121,8 @@ const es: LocalizedContent = {
     'los-ilusos': { title: 'Ayudante de producción', detail: 'Productora de Jonás Trueba.' },
     'factoria-f5': {
       title: 'Bootcamp de programación web full stack',
-      detail: 'Frontend, backend, bases de datos, API REST, control de versiones y seguridad de aplicaciones web.',
+      detail:
+        'Frontend, backend, bases de datos, API REST, control de versiones y seguridad de aplicaciones web.',
     },
     sonido: { title: 'Técnico Superior en Sonido para Audiovisuales y Espectáculos' },
     ifcd0210: {
@@ -127,7 +133,10 @@ const es: LocalizedContent = {
       detail: 'Goya a la mejor película documental.',
     },
     utad: { title: 'Estudios en U-tad' },
-    'cine-en-curso': { title: 'Taller de cine con Jonás Trueba', detail: 'Programa «Cine en Curso».' },
+    'cine-en-curso': {
+      title: 'Taller de cine con Jonás Trueba',
+      detail: 'Programa «Cine en Curso».',
+    },
     bachillerato: {
       title: 'Bachillerato de Artes',
       detail: 'Con talleres de fotografía y diseño gráfico.',

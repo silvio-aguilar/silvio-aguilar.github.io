@@ -33,7 +33,13 @@ export function HeroVisual() {
   const fallback = <PosterFallback profile={profile} />
   return (
     <div className="absolute inset-0">
-      {ready ? <Suspense fallback={fallback}><Scene profile={profile} dark={dark} /></Suspense> : fallback}
+      {ready ? (
+        <Suspense fallback={fallback}>
+          <Scene profile={profile} dark={dark} />
+        </Suspense>
+      ) : (
+        fallback
+      )}
     </div>
   )
 }

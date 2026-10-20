@@ -23,7 +23,8 @@ export default function CvPage() {
   const lang = useLang()
   useDocumentTitle(t('seo.cvTitle'))
   const { content, experience, education, projects, skills } = cvData(lang)
-  const period = (s?: string, e?: string, c?: boolean) => formatPeriod(s, e, lang, t('timeline.now'), c)
+  const period = (s?: string, e?: string, c?: boolean) =>
+    formatPeriod(s, e, lang, t('timeline.now'), c)
 
   return (
     <article className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
@@ -44,7 +45,13 @@ export default function CvPage() {
         </p>
         <p className="mt-2 flex flex-wrap gap-x-4 text-sm">
           {[...socialLinks, ...productLinks].map((l) => (
-            <a key={l.id} href={l.url} rel="noopener noreferrer" target="_blank" className="text-accent hover:underline">
+            <a
+              key={l.id}
+              href={l.url}
+              rel="noopener noreferrer"
+              target="_blank"
+              className="text-accent hover:underline"
+            >
               {l.url.replace(/^https:\/\/(www\.)?/, '')}
             </a>
           ))}
@@ -60,12 +67,16 @@ export default function CvPage() {
           <ul className="space-y-3">
             {experience.map((i) => (
               <li key={i.id} className="grid gap-1 sm:grid-cols-[9rem_1fr]">
-                <span className="font-mono text-sm text-muted">{period(i.start, i.end, i.current)}</span>
+                <span className="font-mono text-sm text-muted">
+                  {period(i.start, i.end, i.current)}
+                </span>
                 <span>
                   <strong>{i.text?.title}</strong>
                   {i.org !== i.text?.title && ` — ${i.org}`}
                   <Todo note={i.todo} />
-                  {i.text?.detail && <span className="block text-sm text-muted">{i.text.detail}</span>}
+                  {i.text?.detail && (
+                    <span className="block text-sm text-muted">{i.text.detail}</span>
+                  )}
                 </span>
               </li>
             ))}
@@ -76,12 +87,16 @@ export default function CvPage() {
           <ul className="space-y-3">
             {education.map((i) => (
               <li key={i.id} className="grid gap-1 sm:grid-cols-[9rem_1fr]">
-                <span className="font-mono text-sm text-muted">{period(i.start, i.end, i.current)}</span>
+                <span className="font-mono text-sm text-muted">
+                  {period(i.start, i.end, i.current)}
+                </span>
                 <span>
                   <strong>{i.text?.title}</strong>
                   {i.org !== i.text?.title && ` — ${i.org}`}
                   <Todo note={i.todo} />
-                  {i.text?.detail && <span className="block text-sm text-muted">{i.text.detail}</span>}
+                  {i.text?.detail && (
+                    <span className="block text-sm text-muted">{i.text.detail}</span>
+                  )}
                 </span>
               </li>
             ))}

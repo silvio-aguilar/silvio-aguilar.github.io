@@ -73,17 +73,29 @@ export function Credits() {
               )}
               <p className="flex flex-wrap gap-3 md:justify-end">
                 {view.links.web && (
-                  <ExternalLink href={view.links.web} className="inline-flex items-center gap-1 text-accent hover:underline" srHint={t('a11y.external')}>
+                  <ExternalLink
+                    href={view.links.web}
+                    className="inline-flex items-center gap-1 text-accent hover:underline"
+                    srHint={t('a11y.external')}
+                  >
                     <Globe size={14} aria-hidden="true" /> {t('links.web')}
                   </ExternalLink>
                 )}
                 {view.links.store && (
-                  <ExternalLink href={view.links.store} className="inline-flex items-center gap-1 text-accent hover:underline" srHint={t('a11y.external')}>
+                  <ExternalLink
+                    href={view.links.store}
+                    className="inline-flex items-center gap-1 text-accent hover:underline"
+                    srHint={t('a11y.external')}
+                  >
                     <ExternalIcon size={14} aria-hidden="true" /> {t('links.store')}
                   </ExternalLink>
                 )}
                 {view.links.repo && (
-                  <ExternalLink href={view.links.repo} className="inline-flex items-center gap-1 text-accent hover:underline" srHint={t('a11y.external')}>
+                  <ExternalLink
+                    href={view.links.repo}
+                    className="inline-flex items-center gap-1 text-accent hover:underline"
+                    srHint={t('a11y.external')}
+                  >
                     <FolderGit2 size={14} aria-hidden="true" /> {t('links.repo')}
                   </ExternalLink>
                 )}
@@ -100,7 +112,11 @@ export function Credits() {
           <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {extra.map((r) => (
               <li key={r.name} className="rounded-md border border-line bg-surface p-4">
-                <ExternalLink href={r.url} className="font-semibold hover:text-accent" srHint={t('a11y.external')}>
+                <ExternalLink
+                  href={r.url}
+                  className="font-semibold hover:text-accent"
+                  srHint={t('a11y.external')}
+                >
                   {r.name}
                 </ExternalLink>
                 {r.description && <p className="mt-1 text-sm text-muted">{r.description}</p>}

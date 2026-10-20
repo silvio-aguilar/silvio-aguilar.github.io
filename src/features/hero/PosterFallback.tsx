@@ -33,7 +33,15 @@ export function PosterFallback({ profile }: { profile: ProfileId }) {
             <circle cx="100" cy="140" r="9" />
             {[0, 72, 144, 216, 288].map((a) => {
               const r = (a * Math.PI) / 180
-              return <circle key={a} cx={100 + Math.cos(r) * 32} cy={140 + Math.sin(r) * 32} r="12" strokeOpacity="0.8" />
+              return (
+                <circle
+                  key={a}
+                  cx={100 + Math.cos(r) * 32}
+                  cy={140 + Math.sin(r) * 32}
+                  r="12"
+                  strokeOpacity="0.8"
+                />
+              )
             })}
             <path d="M40 228h120M52 228v22M148 228v22" strokeOpacity="0.5" />
           </>
