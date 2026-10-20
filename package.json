@@ -10,6 +10,7 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "pretest": "tsx scripts/fetch-repos.ts --if-missing",
     "test": "vitest run",
     "check:dist": "node scripts/check-dist.mjs",
     "repos": "tsx scripts/fetch-repos.ts"
